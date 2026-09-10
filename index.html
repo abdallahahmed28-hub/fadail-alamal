@@ -1,489 +1,2767 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فضائل الأعمال اليومية | منهاج الهدى</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#052f35">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="روضة الأذكار">
+<title>روضة الأذكار | منهاج الهدى</title>
 
-  <!-- أيقونة سطح المكتب والشاشات الرئيسية للهواتف -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='120' fill='%23064E3B'/%3E%3Ccircle cx='256' cy='256' r='190' fill='none' stroke='%23D97706' stroke-width='14' stroke-dasharray='10 15'/%3E%3Cpath d='M256 120 L350 200 L350 360 L256 400 L162 360 L162 200 Z' fill='%23059669' stroke='%23F59E0B' stroke-width='8'/%3E%3Cpath d='M256 180 L290 250 L222 250 Z' fill='%23FFFFFF'/%3E%3Ctext x='50%25' y='72%25' text-anchor='middle' fill='%23FFFFFF' font-family='Cairo, sans-serif' font-size='46' font-weight='900'%3Eالهدى%3C/text%3E%3C/svg%3E">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='120' fill='%23064E3B'/%3E%3Ccircle cx='256' cy='256' r='190' fill='none' stroke='%23D97706' stroke-width='14' stroke-dasharray='10 15'/%3E%3Cpath d='M256 120 L350 200 L350 360 L256 400 L162 360 L162 200 Z' fill='%23059669' stroke='%23F59E0B' stroke-width='8'/%3E%3Cpath d='M256 180 L290 250 L222 250 Z' fill='%23FFFFFF'/%3E%3Ctext x='50%25' y='72%25' text-anchor='middle' fill='%23FFFFFF' font-family='Cairo, sans-serif' font-size='46' font-weight='900'%3Eالهدى%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='28' fill='%23052f35'/%3E%3Cpath d='M64 14C49 31 35 33 25 36v29c0 25 15 40 39 50 24-10 39-25 39-50V36C93 33 79 31 64 14Z' fill='none' stroke='%23f0c66f' stroke-width='5'/%3E%3Ccircle cx='64' cy='61' r='29' fill='none' stroke='%2339b89a' stroke-width='5' stroke-dasharray='3 6'/%3E%3Cpath d='M64 45c-11 10-13 21-12 33 9-3 15-8 12-33Zm0 0c11 10 13 21 12 33-9-3-15-8-12-33Z' fill='%2339b89a'/%3E%3Cpath d='M45 83c13-5 25-5 38 0-8 5-13 10-19 17-6-7-11-12-19-17Z' fill='%23f0c66f'/%3E%3C/svg%3E">
 
-  <!-- خط Cairo بجميع أوزانه لقراءة مريحة وواضحة جداً -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#031d23;
+--bg2:#06383a;
+--panel:#08463f;
+--panel2:#082e39;
+--gold:#f2cb77;
+--gold2:#bc8336;
+--mint:#42c5a3;
+--sky:#4c8bd6;
+--violet:#7455af;
+--rose:#d06b8b;
+--text:#f8efdf;
+--muted:#bad0c8;
+--line:rgba(242,203,119,.23);
+--shadow:0 18px 50px rgba(0,0,0,.24)
+}
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+*{
+box-sizing:border-box;
+-webkit-tap-highlight-color:transparent
+}
 
-  <!-- أيقونات Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+html{
+scroll-behavior:smooth;
+background:var(--bg)
+}
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            emerald: {
-              950: '#022c22',
-              900: '#064e3b',
-              800: '#065f46',
-              700: '#047857',
-              600: '#059669',
-              500: '#10b981',
-              100: '#d1fae5',
-              50: '#ecfdf5'
-            },
-            amber: {
-              500: '#f59e0b',
-              600: '#d97706',
-              700: '#b45309'
-            }
-          },
-          fontFamily: {
-            sans: ['Cairo', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+body{
+margin:0;
+min-height:100vh;
+color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
+background:
+radial-gradient(circle at 10% 0%,rgba(76,139,214,.17),transparent 30%),
+radial-gradient(circle at 93% 8%,rgba(116,85,175,.17),transparent 28%),
+linear-gradient(160deg,#02181e,#063838 48%,#062631);
+padding-bottom:90px
+}
 
-  <style>
-    body {
-      background-color: #F8FAFC;
-      font-family: 'Cairo', sans-serif;
-    }
-    .custom-scroll::-webkit-scrollbar {
-      height: 6px;
-    }
-    .custom-scroll::-webkit-scrollbar-thumb {
-      background: #CBD5E1;
-      border-radius: 9999px;
-    }
-  </style>
+button,input{font:inherit}
+
+.app{
+max-width:780px;
+margin:auto
+}
+
+.hero{
+padding:24px 18px 28px;
+position:relative;
+overflow:hidden;
+background:linear-gradient(145deg,rgba(2,30,37,.82),rgba(5,76,67,.78));
+border-bottom:1px solid var(--line)
+}
+
+.hero:before{
+content:"";
+position:absolute;
+width:370px;
+height:370px;
+border:1px solid rgba(242,203,119,.12);
+border-radius:50%;
+right:-190px;
+top:-250px
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+position:relative
+}
+
+.logo{
+width:70px;
+height:70px;
+border-radius:22px;
+background:linear-gradient(145deg,#08705f,#07303a);
+border:1px solid rgba(242,203,119,.55);
+display:grid;
+place-items:center;
+box-shadow:
+inset 0 0 24px rgba(66,197,163,.14),
+0 12px 28px rgba(0,0,0,.2)
+}
+
+.logo svg{width:47px}
+
+.brand h1{
+margin:0;
+color:var(--gold);
+font-size:1.75rem
+}
+
+.brand b{
+display:block;
+font-size:1.18rem;
+color:#fff;
+margin-top:2px
+}
+
+.brand small{
+display:block;
+color:var(--muted);
+margin-top:4px
+}
+
+.hero-copy{
+text-align:center;
+padding:25px 4px 0;
+position:relative
+}
+
+.hero-copy h2{
+margin:0;
+color:#f6d78f;
+font-size:2.18rem
+}
+
+.hero-copy p{
+margin:8px auto;
+color:#d9e6e1;
+line-height:1.9
+}
+
+.verse{
+margin:15px auto 0;
+max-width:530px;
+padding:10px 14px;
+border:1px solid var(--line);
+border-radius:16px;
+background:rgba(1,25,31,.38);
+color:#f0d494
+}
+
+.search{
+margin:17px 15px 0;
+background:#f2e8d2;
+border-radius:22px;
+padding:6px;
+display:flex;
+gap:7px;
+box-shadow:0 14px 32px rgba(0,0,0,.2)
+}
+
+.search input{
+flex:1;
+border:0;
+outline:0;
+background:transparent;
+padding:14px;
+color:#173a3a;
+text-align:right
+}
+
+.search button{
+width:48px;
+border:0;
+border-radius:16px;
+background:linear-gradient(145deg,#0d7265,#073a47);
+color:white
+}
+
+.section{
+padding:22px 16px 0;
+scroll-margin-top:10px
+}
+
+.head{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+margin-bottom:13px
+}
+
+.head h2{
+margin:0;
+color:#f4d086;
+font-size:1.38rem
+}
+
+.head small{color:var(--muted)}
+
+.quick{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px
+}
+
+.quick a{
+text-decoration:none;
+color:#fff;
+border-radius:25px;
+min-height:165px;
+padding:18px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+box-shadow:var(--shadow);
+position:relative;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08)
+}
+
+.quick a:before{
+content:"";
+position:absolute;
+width:160px;
+height:160px;
+border-radius:50%;
+top:-90px;
+left:-45px;
+background:rgba(255,255,255,.1)
+}
+
+.quick .sun{
+background:linear-gradient(145deg,#c88f38,#75502c 64%,#0e5e51)
+}
+
+.quick .moon{
+background:linear-gradient(145deg,#6356b1,#403773 58%,#0b3650)
+}
+
+.quick i{
+font-style:normal;
+font-size:2rem
+}
+
+.quick strong{
+font-size:1.25rem;
+margin-top:16px
+}
+
+.quick small{
+color:#f6ebd9;
+margin-top:5px
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px
+}
+
+.cat{
+text-decoration:none;
+color:var(--text);
+min-height:112px;
+padding:12px 8px;
+border-radius:21px;
+background:linear-gradient(145deg,rgba(10,79,71,.94),rgba(7,42,53,.97));
+border:1px solid var(--line);
+text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+box-shadow:0 9px 25px rgba(0,0,0,.13)
+}
+
+.cat:nth-child(4n+2){
+background:linear-gradient(145deg,rgba(41,82,130,.9),rgba(7,44,56,.97))
+}
+
+.cat:nth-child(4n+3){
+background:linear-gradient(145deg,rgba(104,65,126,.86),rgba(7,44,56,.97))
+}
+
+.cat:nth-child(4n+4){
+background:linear-gradient(145deg,rgba(129,66,85,.82),rgba(6,49,52,.97))
+}
+
+.cat span{font-size:1.55rem}
+
+.cat b{
+font-size:.9rem;
+margin-top:7px
+}
+
+.cat small{
+font-size:.7rem;
+color:#c6d5d0;
+margin-top:4px
+}
+
+.today{
+border-radius:28px;
+padding:18px;
+background:linear-gradient(145deg,rgba(11,76,69,.98),rgba(7,42,56,.99));
+border:1px solid rgba(242,203,119,.35);
+box-shadow:var(--shadow)
+}
+
+.today-top{
+display:flex;
+justify-content:space-between;
+color:#f6d78e
+}
+
+.today-main{
+text-align:center;
+font-size:2.1rem;
+color:#f6d58a;
+font-weight:800;
+padding:18px 5px 10px;
+line-height:1.7
+}
+
+.chips{
+display:flex;
+gap:7px;
+flex-wrap:wrap;
+justify-content:center
+}
+
+.chip{
+padding:7px 10px;
+border-radius:999px;
+background:rgba(66,197,163,.12);
+border:1px solid rgba(66,197,163,.2);
+color:#c5f2e5;
+font-size:.78rem
+}
+
+.evidence{
+margin-top:14px;
+padding:15px;
+border-radius:18px;
+background:linear-gradient(145deg,#f2e0bc,#e5c98d);
+color:#1c3838;
+text-align:center;
+line-height:2
+}
+
+.evidence small{
+display:block;
+color:#6f5c3a;
+margin-top:6px
+}
+
+.accordion{
+display:flex;
+flex-direction:column;
+gap:10px
+}
+
+.accordion details{
+border:1px solid var(--line);
+border-radius:20px;
+background:linear-gradient(145deg,rgba(9,70,65,.94),rgba(6,44,54,.97));
+overflow:hidden;
+box-shadow:0 9px 24px rgba(0,0,0,.12)
+}
+
+.accordion summary{
+cursor:pointer;
+list-style:none;
+padding:16px;
+display:flex;
+gap:11px;
+align-items:center
+}
+
+.accordion summary::-webkit-details-marker{display:none}
+
+.sicon{
+width:46px;
+height:46px;
+border-radius:15px;
+background:linear-gradient(145deg,rgba(242,203,119,.16),rgba(76,139,214,.14));
+border:1px solid rgba(242,203,119,.16);
+display:grid;
+place-items:center;
+font-size:1.4rem
+}
+
+.stext{flex:1}
+
+.stext b{display:block}
+
+.stext small{
+display:block;
+color:var(--muted);
+font-size:.76rem;
+margin-top:4px
+}
+
+.accordion summary:after{
+content:"＋";
+color:var(--gold);
+font-size:1.25rem
+}
+
+.accordion details[open] summary:after{
+content:"−"
+}
+
+.inside{
+padding:0 13px 13px
+}
+
+.card{
+margin-top:10px;
+border-radius:18px;
+padding:14px;
+background:rgba(2,29,36,.56);
+border:1px solid rgba(242,203,119,.14)
+}
+
+.card h3{
+margin:0 0 9px;
+color:#f5d28a;
+font-size:1.03rem
+}
+
+.dhikr{
+font-size:1.08rem;
+line-height:2.05;
+color:#f7efe1
+}
+
+.surah{
+padding:11px;
+margin:10px 0;
+border-radius:14px;
+background:rgba(242,203,119,.07);
+border:1px solid rgba(242,203,119,.12)
+}
+
+.surah b{
+display:block;
+color:#f1cd7e;
+margin-bottom:4px
+}
+
+.hadith{
+margin-top:11px;
+padding:12px;
+border-radius:14px;
+background:rgba(76,139,214,.11);
+border:1px solid rgba(76,139,214,.18);
+color:#dbe8f7;
+line-height:1.9
+}
+
+.hadith b{color:#f5d28a}
+
+.meta{
+display:flex;
+gap:7px;
+flex-wrap:wrap;
+margin-top:10px
+}
+
+.meta span{
+font-size:.72rem;
+padding:6px 9px;
+border-radius:999px;
+background:rgba(66,197,163,.11);
+border:1px solid rgba(66,197,163,.18);
+color:#c9ede3
+}
+
+.fav{
+margin-top:10px;
+border:1px solid rgba(242,203,119,.2);
+background:rgba(242,203,119,.07);
+color:#f4d083;
+padding:8px 11px;
+border-radius:12px
+}
+
+.fav.on{
+background:rgba(208,107,139,.2);
+color:#ffd9e4
+}
+
+.tasbox{
+border-radius:30px;
+padding:22px 15px;
+background:linear-gradient(145deg,rgba(7,70,64,.99),rgba(3,31,41,.99));
+border:1px solid rgba(242,203,119,.3);
+box-shadow:var(--shadow);
+text-align:center
+}
+
+.tasbih-tap{
+width:min(78vw,345px);
+aspect-ratio:1;
+border-radius:50%;
+margin:8px auto 18px;
+border:2px solid rgba(242,203,119,.55);
+background:radial-gradient(circle at 50% 44%,#117663 0 39%,#074347 40% 64%,#042a34 65%);
+color:white;
+box-shadow:
+inset 0 0 45px rgba(66,197,163,.22),
+0 20px 46px rgba(0,0,0,.25);
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+touch-action:manipulation
+}
+
+.tasbih-tap:before{
+content:"";
+position:absolute;
+inset:7%;
+border:11px dotted #4bc3a5;
+border-radius:50%;
+opacity:.85
+}
+
+.tasbih-tap>*{
+position:relative;
+z-index:1
+}
+
+.tasbih-tap .num{
+font-size:4.4rem;
+color:#f7d88f;
+font-weight:800;
+line-height:1
+}
+
+.tasbih-tap .word{
+font-size:1.15rem;
+margin-top:8px
+}
+
+.tasbih-tap .tap-hint{
+font-size:.78rem;
+color:#c9ded6;
+margin-top:9px;
+padding:5px 10px;
+border-radius:999px;
+background:rgba(0,0,0,.18)
+}
+
+.targets,
+.actions{
+display:grid;
+gap:8px;
+max-width:440px;
+margin:0 auto 10px
+}
+
+.targets{
+grid-template-columns:repeat(4,1fr)
+}
+
+.actions{
+grid-template-columns:repeat(3,1fr)
+}
+
+.targets button,
+.actions button{
+border:1px solid var(--line);
+background:#0a4d49;
+color:#e8f0ec;
+border-radius:14px;
+padding:11px 4px;
+cursor:pointer
+}
+
+.targets button.on{
+background:linear-gradient(145deg,#f0c76e,#a86f2e);
+color:#103536;
+font-weight:800
+}
+
+.notice{
+padding:14px;
+border-radius:17px;
+background:linear-gradient(90deg,rgba(116,85,175,.18),rgba(76,139,214,.13));
+border:1px solid rgba(159,140,222,.17);
+color:#ded7ee;
+line-height:1.85
+}
+
+.footer{
+text-align:center;
+color:#9fb8b1;
+padding:28px 16px 14px
+}
+
+.footer b{color:#f1cb79}
+
+.bottom{
+position:fixed;
+z-index:30;
+bottom:0;
+left:0;
+right:0;
+padding:8px 7px calc(8px + env(safe-area-inset-bottom));
+background:rgba(3,28,34,.93);
+backdrop-filter:blur(15px);
+border-top:1px solid var(--line)
+}
+
+.bottom nav{
+max-width:780px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(5,1fr)
+}
+
+.bottom a{
+text-decoration:none;
+color:#adc1bb;
+text-align:center;
+font-size:.7rem;
+padding:6px 2px;
+border-radius:12px
+}
+
+.bottom span{
+display:block;
+font-size:1.2rem;
+margin-bottom:2px
+}
+
+.bottom a:active{
+background:rgba(242,203,119,.08);
+color:#f3cf80
+}
+
+.hidden{display:none!important}
+
+@media(max-width:430px){
+.hero-copy h2{font-size:1.93rem}
+.grid{grid-template-columns:repeat(3,1fr)}
+.cat{min-height:105px;padding:10px 5px}
+.cat b{font-size:.82rem}
+.cat small{display:none}
+.today-main{font-size:1.78rem}
+.brand h1{font-size:1.55rem}
+}
+
+@media(max-width:350px){
+.quick{grid-template-columns:1fr}
+.grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
 </head>
-<body class="text-slate-800 min-h-screen pb-28">
 
-  <!-- الرأس الرسمي الملكي (Emerald Official Header) -->
-  <header class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-800 text-white shadow-xl border-b-4 border-amber-500 sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-4 lg:px-8 py-4">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        
-        <!-- الجانب الأيمن: شعار وهوية قناة منهاج الهدى واسم التطبيق -->
-        <div class="flex items-center gap-4">
-          <!-- الشعار الرسمي المصمم لقناة منهاج الهدى -->
-          <div class="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-700 to-emerald-900 border-2 border-amber-400/80 flex items-center justify-center shadow-lg shrink-0">
-            <i class="fa-solid fa-book-open-reader text-amber-400 text-2xl"></i>
-            <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-amber-500 rounded-full flex items-center justify-center text-[10px] text-emerald-950 font-black">
-              ✓
-            </div>
-          </div>
+<body>
 
-          <div>
-            <div class="flex items-center gap-2">
-              <h1 class="text-xl md:text-2xl font-black text-white tracking-wide">
-                فضائل الأعمال اليومية
-              </h1>
-              <span class="text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-400/40 px-2.5 py-0.5 rounded-full">
-                مُحقّق وموثق
-              </span>
-            </div>
-            <div class="flex items-center gap-2 mt-0.5">
-              <span class="text-xs font-black text-amber-400 tracking-wider">قناة مِنْهَاج الهُدَى</span>
-              <span class="text-emerald-300 text-xs">•</span>
-              <span class="text-xs font-semibold text-emerald-100">سياحة الروح في صحيح الأثر وتجارب السلف</span>
-            </div>
-          </div>
-        </div>
+<div class="app" id="top">
 
-        <!-- الجانب الأيسر: مقياس الإنجاز الرقمي الرسمي -->
-        <div class="flex items-center gap-3 bg-emerald-950/60 border border-emerald-700/60 rounded-2xl px-4 py-2 self-start sm:self-auto">
-          <div class="text-left">
-            <div class="text-[11px] font-bold text-emerald-200">نسبة الورد المنجز</div>
-            <div class="text-sm font-black text-amber-400"><span id="completed-count">0</span> / <span id="total-count">0</span> عمل</div>
-          </div>
-          <div class="w-11 h-11 rounded-xl bg-emerald-800 border-2 border-amber-400 flex items-center justify-center text-xs font-black text-white shadow-inner" id="progress-percent">
-            0%
-          </div>
-        </div>
+<header class="hero">
 
-      </div>
-    </div>
-  </header>
+<div class="brand">
 
-  <!-- الحاوية الأساسية -->
-  <main class="max-w-5xl mx-auto px-4 lg:px-8 pt-6">
+<div class="logo">
+<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+<path d="M32 5C25 13 18 16 10 17v15c0 13 8 22 22 28 14-6 22-15 22-28V17c-8-1-15-4-22-12Z" stroke="#f0c66f" stroke-width="2.4"/>
+<circle cx="32" cy="34" r="15" stroke="#42c5a3" stroke-width="2" stroke-dasharray="2 4"/>
+<path d="M32 23c-8 7-10 14-9 22 7-1 12-5 9-22Zm0 0c8 7 10 14 9 22-7-1-12-5-9-22Z" fill="#42c5a3"/>
+<path d="M21 47c7-3 15-3 22 0-5 3-8 5-11 9-3-4-6-6-11-9Z" fill="#f0c66f"/>
+</svg>
+</div>
 
-    <!-- بطاقة التوجيه والدرة السلفية على نمط الزمردي الحديث -->
-    <section class="mb-8">
-      <div class="rounded-3xl p-6 lg:p-8 bg-white border-2 border-emerald-100 shadow-sm relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-full blur-2xl pointer-events-none"></div>
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
-          
-          <div class="space-y-2 max-w-2xl">
-            <span class="inline-flex items-center gap-2 text-xs font-black text-emerald-800 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
-              <i class="fa-solid fa-quote-right text-amber-600"></i> مِشكاة السلف وتجاربهم
-            </span>
-            <p class="text-xl md:text-2xl font-black text-slate-900 leading-relaxed pt-1">
-              «الذكر للقلب مثل الماء للسمك، فكيف يكون حال السمك إذا فارق الماء؟ ومن حَصَّن يومه بالأوراد المأثورة كان في حصنٍ حصين لا تنفذ إليه سهام العدو.»
-            </p>
-            <div class="text-sm font-bold text-emerald-700">— الإمام شمس الدين ابن القيّم رحمه الله (الوابل الصيّب)</div>
-          </div>
+<div>
+<h1>روضة الأذكار</h1>
+<b>منهاج الهدى</b>
+<small>صحبة يومية مع الذكر الصحيح</small>
+</div>
 
-          <div class="bg-emerald-50/80 rounded-2xl p-4 border border-emerald-100 flex items-center gap-4 shrink-0">
-            <div class="w-12 h-12 rounded-2xl bg-emerald-700 text-white flex items-center justify-center text-xl font-bold shadow-md">
-              <i class="fa-regular fa-clock"></i>
-            </div>
-            <div>
-              <div class="text-xs font-bold text-slate-500">المحطة المستحبة الآن</div>
-              <div class="text-base font-black text-emerald-900" id="time-station-label">أوراد النهار والسعي</div>
-            </div>
-          </div>
+</div>
 
-        </div>
-      </div>
-    </section>
+<div class="hero-copy">
+<h2>اذكر الله بقلبٍ حاضر</h2>
+<p>أذكار الصباح والمساء وأذكار اليوم والليلة، مع نصوصها ودلائلها دون اختصار مخل.</p>
+<div class="verse">﴿ فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ ﴾</div>
+</div>
 
-    <!-- شريط الفلاتر الزمردي الأنيق -->
-    <nav class="flex items-center gap-2.5 overflow-x-auto pb-4 custom-scroll mb-8" id="category-tabs">
-      <button onclick="filterCategory('all')" class="category-btn active px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-emerald-700 text-white shadow-md shadow-emerald-700/25 whitespace-nowrap">
-        <i class="fa-solid fa-shapes"></i> كافة الأوراد والأعمال
-      </button>
-      <button onclick="filterCategory('hundred')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-emerald-600 whitespace-nowrap">
-        <i class="fa-solid fa-certificate text-amber-500"></i> المئويات (100 مرة)
-      </button>
-      <button onclick="filterCategory('morning')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-emerald-600 whitespace-nowrap">
-        <i class="fa-solid fa-sun text-amber-500"></i> الفجر والصباح
-      </button>
-      <button onclick="filterCategory('prayer')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-emerald-600 whitespace-nowrap">
-        <i class="fa-solid fa-mosque text-emerald-700"></i> دبر الصلوات المكتوبة
-      </button>
-      <button onclick="filterCategory('actions')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-emerald-600 whitespace-nowrap">
-        <i class="fa-solid fa-heart-pulse text-teal-600"></i> سنن وأعمال النهار
-      </button>
-      <button onclick="filterCategory('night')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-emerald-600 whitespace-nowrap">
-        <i class="fa-solid fa-moon text-indigo-600"></i> المساء والنوم
-      </button>
-    </nav>
+</header>
 
-    <!-- شبكة البطاقات البيضاء المشرقة ذات الخط الواضح جداً -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="cards-grid"></div>
+<div class="search">
+<input id="searchInput" type="search" placeholder="ابحث عن ذكر أو قسم..." oninput="searchApp()">
+<button type="button" onclick="clearSearch()">⌕</button>
+</div>
 
-    <!-- التذييل الرسمي لقناة منهاج الهدى -->
-    <footer class="mt-16 text-center border-t border-slate-200 pt-8 pb-4">
-      <div class="inline-flex items-center gap-2 text-base font-black text-slate-800">
-        <span>تطبيق فضائل الأعمال اليومية</span>
-        <span class="text-amber-500">•</span>
-        <span class="text-emerald-800 font-black">قناة مِنْهَاج الهُدَى</span>
-      </div>
-      <p class="text-xs text-slate-500 mt-1 font-semibold">جميع الأحاديث الواردة مصححة ومحققة من كتب السنة المعتمدة (البخاري ومسلم والسنن)</p>
-    </footer>
+<section class="section" id="home">
 
-  </main>
+<div class="head">
+<h2>ابدأ يومك</h2>
+<small>الأكثر استخدامًا</small>
+</div>
 
-  <script>
-    const dailyItems = [
-      {
-        id: 1,
-        category: 'hundred',
-        badge: 'مئوية مباركة',
-        icon: 'fa-solid fa-hands-praying',
-        title: 'التسبيح المطلق وحط الخطايا',
-        text: '«سُبْحَانَ اللَّهِ وَبِحَمْدِهِ»',
-        targetCount: 100,
-        currentCount: 0,
-        hadith: 'قال رسول الله ﷺ: «مَنْ قَالَ: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ فِي يَوْمٍ مِائَةَ مَرَّةٍ، حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ البَحْرِ».',
-        source: 'صحيح البخاري (6405) وصحيح مسلم (2692)',
-        salafQuote: 'قال ابن هبيرة: "هذا التسبيح ينفي عن الله كل نقص ويثبت له كل كمال؛ لذلك حطت به الخطايا العظام".'
-      },
-      {
-        id: 2,
-        category: 'hundred',
-        badge: 'حرز اليوم وعتق الرقاب',
-        icon: 'fa-solid fa-shield-halved',
-        title: 'التهليل التام وحصن الشيطان',
-        text: '«لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ»',
-        targetCount: 100,
-        currentCount: 0,
-        hadith: 'قال ﷺ: «كَانَتْ لَهُ عَدْلَ عَشْرِ رِقَابٍ، وَكُتِبَتْ لَهُ مِائَةُ حَسَنَةٍ، وَمُحِيَتْ عَنْهُ مِائَةُ سَيِّئَةٍ، وَكَانَتْ لَهُ حِرْزًا مِنَ الشَّيْطَانِ يَوْمَهُ ذَلِكَ حَتَّى يُمْسِيَ».',
-        source: 'متفق عليه: صحيح البخاري (3293)، صحيح مسلم (2691)',
-        salafQuote: 'قال الفضيل بن عياض: "من قالها مائة مرة بنية صادقة عصمه الله في يومه من نزغات الهوى والوسواس".'
-      },
-      {
-        id: 3,
-        category: 'hundred',
-        badge: 'مئوية مباركة',
-        icon: 'fa-solid fa-arrows-rotate',
-        title: 'الاستغفار النبوي اليومي',
-        text: '«أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ»',
-        targetCount: 100,
-        currentCount: 0,
-        hadith: 'قال النبي ﷺ: «إِنَّهُ لَيُغَانُ عَلَى قَلْبِي، وَإِنِّي لَأَسْتَغْفِرُ اللهَ فِي الْيَوْمِ مِائَةَ مَرَّةٍ».',
-        source: 'صحيح مسلم (2702) عن الأغر المزني',
-        salafQuote: 'قال قتادة: "إن هذا القرآن يدلكم على دائكم ودوائكم؛ فأما داؤكم فالذنوب، وأما دواؤكم فالاستغفار".'
-      },
-      {
-        id: 4,
-        category: 'morning',
-        badge: 'موجب للجنة',
-        icon: 'fa-solid fa-crown',
-        title: 'سيّد الاستغفار',
-        text: '«اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ»',
-        targetCount: 1,
-        currentCount: 0,
-        hadith: 'قال ﷺ: «وَمَنْ قَالَهَا مِنَ النَّهَارِ مُوقِنًا بِهَا فَمَاتَ مِنْ يَوْمِهِ قَبْلَ أَنْ يُمْسِيَ فَهُوَ مِنْ أَهْلِ الجَنَّةِ، وَمَنْ قَالَهَا مِنَ اللَّيْلِ وَهُوَ مُوقِنٌ بِهَا فَمَاتَ قَبْلَ أَنْ يُصْبِحَ فَهُوَ مِنْ أَهْلِ الجَنَّةِ».',
-        source: 'صحيح البخاري (6306) عن شداد بن أوس',
-        salafQuote: 'قال ابن تيمية: "سُمي سيد الاستغفار لاشتماله على التوبة، وتوحيد الربوبية والألوهية، وشكر النعمة ورؤية التقصير".'
-      },
-      {
-        id: 5,
-        category: 'morning',
-        badge: 'أجر مضاعف عظيم',
-        icon: 'fa-solid fa-scale-balanced',
-        title: 'تسبيح جوامع الكلم (الوزن العظيم)',
-        text: '«سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ»',
-        targetCount: 3,
-        currentCount: 0,
-        hadith: 'قال ﷺ لجويرية رضي الله عنها: «لَقَدْ قُلْتُ بَعْدَكِ أَرْبَعَ كَلِمَاتٍ، ثَلَاثَ مَرَّاتٍ، لَوْ وُزِنَتْ بِمَا قُلْتِ مُنْذُ الْيَوْمِ لَوَزَنَتْهُنَّ».',
-        source: 'صحيح مسلم (2726)',
-        salafQuote: 'قال ابن القيم: "تفاضل الأعمال عند الله ليس بكثرة الحركات بل بمقدار ما يوقر في القلب من التعظيم والمعرفة".'
-      },
-      {
-        id: 6,
-        category: 'prayer',
-        badge: 'دبر كل صلاة',
-        icon: 'fa-solid fa-book-quran',
-        title: 'آية الكرسي دبر المكتوبة',
-        text: '«اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...»',
-        targetCount: 1,
-        currentCount: 0,
-        hadith: 'قال ﷺ: «مَنْ قَرَأَ آيَةَ الْكُرْسِيِّ دُبُرَ كُلِّ صَلَاةٍ مَكْتُوبَةٍ لَمْ يَمْنَعْهُ مِنْ دُخُولِ الْجَنَّةِ إِلَّا أَنْ يَمُوتَ».',
-        source: 'السنن الكبرى للنسائي (9848)، وصححه الألباني في صحيح الجامع (6464)',
-        salafQuote: 'قال شيخ الإسلام ابن تيمية: "ما تركتها قط عقيب كل صلاة منذ بلغني هذا الحديث".'
-      },
-      {
-        id: 7,
-        category: 'prayer',
-        badge: 'دبر كل صلاة',
-        icon: 'fa-solid fa-gem',
-        title: 'تسبيح الصلوات المكتوبة',
-        text: '«سُبْحَانَ اللَّهِ (33) ، الحَمْدُ لِلَّهِ (33) ، اللَّهُ أَكْبَرُ (33) ، وتَمَامَ المِائَةِ: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ»',
-        targetCount: 100,
-        currentCount: 0,
-        hadith: 'قال ﷺ: «مَنْ سَبَّحَ فِي دُبُرِ كُلِّ صَلَاةٍ ثَلَاثًا وَثَلَاثِينَ... وَقَالَ تَمَامَ المِائَةِ... غُفِرَتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ البَحْرِ».',
-        source: 'صحيح مسلم (597) عن أبي هريرة',
-        salafQuote: 'قال سفيان الثوري: "التعقيب بعد الصلاة بهذه الكلمات يثبت أجر الصلاة ويكون كالقفل عليها من الضياع".'
-      },
-      {
-        id: 8,
-        category: 'actions',
-        badge: 'بيت في الجنة',
-        icon: 'fa-solid fa-house-chimney',
-        title: 'السنن الرواتب (12 ركعة في اليوم)',
-        text: '«أربع ركعات قبل الظهر وركعتان بعدها، وركعتان بعد المغرب، وركعتان بعد العشاء، وركعتان قبل صلاة الفجر»',
-        targetCount: 1,
-        currentCount: 0,
-        hadith: 'قال ﷺ: «مَا مِنْ عَبْدٍ مُسْلِمٍ يُصَلِّي لِلَّهِ كُلَّ يَوْمٍ ثِنْتَيْ عَشْرَةَ رَكْعَةً تَطَوُّعًا غَيْرَ فَرِيضَةٍ إِلَّا بَنَى اللَّهُ لَهُ بَيْتًا فِي الجَنَّةِ».',
-        source: 'صحيح مسلم (728) عن أم حبيبة رضي الله عنها',
-        salafQuote: 'قال شريح القاضي: "إني لأصلي هذه الركعات وأستحيي من ربي أن يمر يوم دون أن أضع لبنة في قصري في الجنة".'
-      },
-      {
-        id: 9,
-        category: 'actions',
-        badge: 'صدقة 360 مفصل',
-        icon: 'fa-solid fa-sun',
-        title: 'صلاة الأوّابين (الضحى)',
-        text: '«ركعتان إلى ثمان ركعات وقت الضحى» شكرٌ يومي لعافية المفاصل وصحة الجسد.',
-        targetCount: 1,
-        currentCount: 0,
-        hadith: 'قال ﷺ: «يُصْبِحُ عَلَى كُلِّ سُلَامَى مِنْ أَحَدِكُمْ صَدَقَةٌ... وَيُجْزِئُ مِنْ ذَلِكَ رَكْعَتَانِ يَرْكَعُهُمَا مِنَ الضُّحَى».',
-        source: 'صحيح مسلم (720) عن أبي ذر رضي الله عنه',
-        salafQuote: 'قال الإمام الأوزاعي: "صلاة الضحى علامة الإنابة؛ لأن الناس يشتغلون بغفلاتهم والعبد يُقبل على سيده".'
-      },
-      {
-        id: 10,
-        category: 'night',
-        badge: 'حفظ الليلة من السموم',
-        icon: 'fa-solid fa-shield-cat',
-        title: 'الاستعاذة بالكلمات التامات',
-        text: '«أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ»',
-        targetCount: 3,
-        currentCount: 0,
-        hadith: 'قال ﷺ: «أَمَا لَوْ قُلْتَ حِينَ أَمْسَيْتَ: أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ، لَمْ تَضُرَّكَ».',
-        source: 'صحيح مسلم (2709) عن أبي هريرة',
-        salafQuote: 'قال الإمام القرطبي: "هذا خبر صحيح صدّقناه تجربة؛ فما تركته منذ سمعته إلا ليلة فلدغتني عقرب فإذا بي نسيتها".'
-      },
-      {
-        id: 11,
-        category: 'night',
-        badge: 'خير من خادم',
-        icon: 'fa-solid fa-bed',
-        title: 'تسبيح النوم وفراش الفطرة',
-        text: '«سُبْحَانَ اللَّهِ (33) ، الحَمْدُ لِلَّهِ (33) ، اللَّهُ أَكْبَرُ (34)»',
-        targetCount: 100,
-        currentCount: 0,
-        hadith: 'قال ﷺ لعلي وفاطمة: «أَلَا أَدُلُّكُمَا عَلَى خَيْرٍ لَكُمَا مِنْ خَادِمٍ؟ إِذَا أَوَيْتُمَا إِلَى فِرَاشِكُمَا فَسَبِّحَا ثَلَاثًا وَثَلَاثِينَ، وَاحْمَدَا ثَلَاثًا وَثَلَاثِينَ، وَكَبِّرَا أَرْبَعًا وَثَلَاثِينَ».',
-        source: 'متفق عليه: صحيح البخاري (3705)، صحيح مسلم (2727)',
-        salafQuote: 'قال علي بن أبي طالب رضي الله عنه: "ما تركتها منذ سمعتها من رسول الله ﷺ، قيل له: ولا ليلة صِفّين؟ قال: ولا ليلة صِفّين".'
-      }
-    ];
+<div class="quick">
 
-    let currentFilter = 'all';
+<a class="sun" href="#morning">
+<i>☀️</i>
+<strong>أذكار الصباح</strong>
+<small>ابدأ يومك بذكر الله</small>
+</a>
 
-    function renderCards() {
-      const grid = document.getElementById('cards-grid');
-      grid.innerHTML = '';
+<a class="moon" href="#evening">
+<i>🌙</i>
+<strong>أذكار المساء</strong>
+<small>اختم يومك بالسكينة</small>
+</a>
 
-      const filtered = dailyItems.filter(item => {
-        if (currentFilter === 'all') return true;
-        return item.category === currentFilter;
-      });
+</div>
 
-      filtered.forEach(item => {
-        const isDone = item.currentCount >= item.targetCount;
-        const card = document.createElement('article');
-        card.className = `rounded-3xl p-6 md:p-7 bg-white border-2 transition-all flex flex-col justify-between shadow-sm ${
-          isDone ? 'border-emerald-600 bg-emerald-50/20 shadow-md' : 'border-slate-200 hover:border-emerald-500 hover:shadow-lg'
-        }`;
+</section>
 
-        card.innerHTML = `
-          <div>
-            <!-- الرأس والوسم -->
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-black bg-emerald-50 text-emerald-800 border border-emerald-200">
-                <i class="${item.icon} text-emerald-600"></i>
-                ${item.badge}
-              </span>
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-black text-slate-700 bg-slate-100 px-3 py-1 rounded-xl border border-slate-200">
-                  الهدف: ${item.targetCount}
-                </span>
-                ${isDone ? '<span class="text-xs bg-emerald-600 text-white font-black px-2.5 py-1 rounded-lg">مُكتمل ✓</span>' : ''}
-              </div>
-            </div>
+<section class="section" id="today">
 
-            <!-- عنوان الذكر -->
-            <h3 class="text-xl font-black text-slate-900 mb-4">
-              ${item.title}
-            </h3>
+<div class="today">
 
-            <!-- متن الذكر (خط Cairo عريض جداً وواضح) -->
-            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 mb-5">
-              <p class="text-2xl md:text-3xl font-black text-slate-900 leading-relaxed select-none">
-                ${item.text}
-              </p>
-            </div>
+<div class="today-top">
+<b>ذكر اليوم</b>
+<span>✦</span>
+</div>
 
-            <!-- التخريج وأقوال السلف -->
-            <div class="space-y-3 mb-6">
-              <div class="rounded-xl bg-slate-50 p-4 border border-slate-200">
-                <div class="font-black text-sm text-emerald-800 mb-1.5 flex items-center gap-1.5">
-                  <i class="fa-solid fa-circle-check text-emerald-600"></i>
-                  صحيح الأثر وتخريجه:
-                </div>
-                <p class="text-slate-700 text-sm md:text-base font-bold leading-relaxed">${item.hadith}</p>
-                <div class="text-xs text-emerald-700 font-black mt-2 font-mono">${item.source}</div>
-              </div>
+<div class="today-main">
+سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+</div>
 
-              <div class="rounded-xl bg-amber-50/70 p-4 border border-amber-200">
-                <div class="font-black text-sm text-amber-800 mb-1.5 flex items-center gap-1.5">
-                  <i class="fa-solid fa-quote-right text-amber-600"></i>
-                  تأمل وتجربة السلف:
-                </div>
-                <p class="text-slate-800 text-sm md:text-base font-bold leading-relaxed">${item.salafQuote}</p>
-              </div>
-            </div>
-          </div>
+<div class="chips">
+<span class="chip">100 مرة في اليوم</span>
+<span class="chip">متفق عليه</span>
+</div>
 
-          <!-- العداد وأزرار التحكم -->
-          <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-4">
-            <div class="flex items-baseline gap-2">
-              <span class="text-4xl font-black text-slate-900">${item.currentCount}</span>
-              <span class="text-sm font-black text-slate-400">/ ${item.targetCount}</span>
-            </div>
+<div class="evidence">
+«مَنْ قَالَ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ فِي يَوْمٍ مِائَةَ مَرَّةٍ حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ»
+<small>رواه البخاري (6405) ومسلم (2691)</small>
+</div>
 
-            <div class="flex items-center gap-2.5">
-              <button onclick="resetCount(${item.id})" title="تصفير العداد" class="w-12 h-12 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-900 flex items-center justify-center transition">
-                <i class="fa-solid fa-rotate-left text-base"></i>
-              </button>
-              <button onclick="incrementCount(${item.id})" class="px-6 py-3.5 rounded-2xl font-black text-sm flex items-center gap-2 transition-all ${
-                isDone 
-                  ? 'bg-emerald-700 text-white cursor-default shadow-sm' 
-                  : 'bg-emerald-600 hover:bg-emerald-700 text-white active:scale-95 shadow-md shadow-emerald-700/25'
-              }">
-                <i class="fa-solid ${isDone ? 'fa-check' : 'fa-fingerprint'} text-base"></i>
-                ${isDone ? 'تم بحمد الله' : 'تسجيل ذكر'}
-              </button>
-            </div>
-          </div>
-        `;
+</div>
 
-        grid.appendChild(card);
-      });
+</section>
 
-      updateProgress();
-    }
+<section class="section" id="categories">
 
-    function incrementCount(id) {
-      const item = dailyItems.find(i => i.id === id);
-      if (item && item.currentCount < item.targetCount) {
-        item.currentCount++;
-        if (navigator.vibrate) navigator.vibrate(30);
-        renderCards();
-      }
-    }
+<div class="head">
+<h2>بقية الأذكار</h2>
+<small>لليوم والليلة</small>
+</div>
 
-    function resetCount(id) {
-      const item = dailyItems.find(i => i.id === id);
-      if (item) {
-        item.currentCount = 0;
-        renderCards();
-      }
-    }
+<div class="grid searchable">
 
-    function updateProgress() {
-      const total = dailyItems.length;
-      const completed = dailyItems.filter(i => i.currentCount >= i.targetCount).length;
-      const percent = Math.round((completed / total) * 100);
+<a class="cat" href="#prayer"><span>🕌</span><b>بعد الصلوات</b><small>عقب الفريضة</small></a>
+<a class="cat" href="#sleep"><span>🛏️</span><b>النوم والاستيقاظ</b><small>قبل النوم وبعده</small></a>
+<a class="cat" href="#house"><span>🏠</span><b>المنزل</b><small>الدخول والخروج</small></a>
+<a class="cat" href="#food"><span>🍽️</span><b>الطعام والشراب</b><small>قبل الطعام وبعده</small></a>
+<a class="cat" href="#clothes"><span>👕</span><b>اللباس</b><small>عند لبس الثوب</small></a>
+<a class="cat" href="#travel"><span>✈️</span><b>السفر</b><small>السفر والرجوع</small></a>
+<a class="cat" href="#weather"><span>🌧️</span><b>المطر والريح</b><small>تقلبات الجو</small></a>
+<a class="cat" href="#illness"><span>💗</span><b>المرض والكرب</b><small>الدعاء والرقية</small></a>
+<a class="cat" href="#mosque"><span>🕋</span><b>المسجد</b><small>الدخول والخروج</small></a>
+<a class="cat" href="#adhan"><span>🔊</span><b>الأذان</b><small>الإجابة والدعاء</small></a>
+<a class="cat" href="#bathroom"><span>🚪</span><b>الخلاء</b><small>الدخول والخروج</small></a>
+<a class="cat" href="#wudu"><span>💧</span><b>الوضوء</b><small>الذكر بعده</small></a>
+<a class="cat" href="#sneeze"><span>🌿</span><b>العطاس</b><small>الحمد والتشميت</small></a>
+<a class="cat" href="#gathering"><span>👥</span><b>المجلس</b><small>كفارة المجلس</small></a>
+<a class="cat" href="#distress"><span>🤲</span><b>الهم والحزن</b><small>أدعية جامعة</small></a>
+<a class="cat" href="#general"><span>✨</span><b>أذكار مطلقة</b><small>تسبيح وتهليل</small></a>
 
-      document.getElementById('completed-count').innerText = completed;
-      document.getElementById('total-count').innerText = total;
-      document.getElementById('progress-percent').innerText = `${percent}%`;
-    }
+</div>
 
-    function filterCategory(cat) {
-      currentFilter = cat;
-      document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.classList.remove('bg-emerald-700', 'text-white', 'shadow-md', 'shadow-emerald-700/25');
-        btn.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-700');
-      });
+</section>
 
-      const activeBtn = window.event.currentTarget;
-      activeBtn.classList.remove('bg-white', 'border-slate-200', 'text-slate-700');
-      activeBtn.classList.add('bg-emerald-700', 'text-white', 'shadow-md', 'shadow-emerald-700/25');
+<section class="section" id="morning">
 
-      renderCards();
-    }
+<div class="head">
+<h2>☀️ أذكار الصباح</h2>
+<a href="#home" style="color:#f2cb77;text-decoration:none">العودة ↑</a>
+</div>
 
-    function detectTimeStation() {
-      const hour = new Date().getHours();
-      const label = document.getElementById('time-station-label');
-      if (hour >= 4 && hour < 9) {
-        label.innerText = 'محطة الفجر والصباح';
-      } else if (hour >= 9 && hour < 16) {
-        label.innerText = 'محطة الضحى والسعي';
-      } else if (hour >= 16 && hour < 20) {
-        label.innerText = 'محطة العصر والمساء';
-      } else {
-        label.innerText = 'محطة حصاد الليل وفراش النوم';
-      }
-    }
+<div class="accordion searchable">
 
-    window.onload = () => {
-      detectTimeStation();
-      renderCards();
-    };
-  </script>
+<details open>
+
+<summary>
+<span class="sicon">📖</span>
+<span class="stext">
+<b>الإخلاص والفلق والناس</b>
+<small>ثلاث مرات صباحًا</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="surah">
+<b>سورة الإخلاص</b>
+<div class="dhikr">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ<br>
+قُلْ هُوَ اللَّهُ أَحَدٌ ۝
+اللَّهُ الصَّمَدُ ۝
+لَمْ يَلِدْ وَلَمْ يُولَدْ ۝
+وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ.
+</div>
+</div>
+
+<div class="surah">
+<b>سورة الفلق</b>
+<div class="dhikr">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ<br>
+قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝
+مِنْ شَرِّ مَا خَلَقَ ۝
+وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝
+وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝
+وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ.
+</div>
+</div>
+
+<div class="surah">
+<b>سورة الناس</b>
+<div class="dhikr">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ<br>
+قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝
+مَلِكِ النَّاسِ ۝
+إِلَهِ النَّاسِ ۝
+مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝
+الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝
+مِنَ الْجِنَّةِ وَالنَّاسِ.
+</div>
+</div>
+
+<div class="hadith">
+<b>الدليل:</b>
+قال النبي ﷺ لعبد الله بن خبيب:
+«قُلْ هُوَ اللَّهُ أَحَدٌ وَالْمُعَوِّذَتَيْنِ حِينَ تُمْسِي وَحِينَ تُصْبِحُ ثَلَاثَ مَرَّاتٍ تَكْفِيكَ مِنْ كُلِّ شَيْءٍ».
+</div>
+
+<div class="meta">
+<span>3 مرات</span>
+<span>أبو داود 5082</span>
+<span>الترمذي 3575 — حسن صحيح</span>
+</div>
+
+<button class="fav" data-fav="m1" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🌅</span>
+<span class="stext">
+<b>أصبحنا وأصبح الملك لله</b>
+<small>مرة واحدة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ،
+وَالْحَمْدُ لِلَّهِ،
+لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ،
+لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ
+وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.
+رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ
+وَخَيْرَ مَا بَعْدَهُ،
+وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ
+وَشَرِّ مَا بَعْدَهُ،
+رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ،
+رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ
+وَعَذَابٍ فِي الْقَبْرِ.
+</div>
+
+<div class="meta">
+<span>مرة</span>
+<span>رواه مسلم 2723</span>
+</div>
+
+<button class="fav" data-fav="m2" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🤲</span>
+<span class="stext">
+<b>اللهم بك أصبحنا</b>
+<small>مرة واحدة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+اللَّهُمَّ بِكَ أَصْبَحْنَا،
+وَبِكَ أَمْسَيْنَا،
+وَبِكَ نَحْيَا،
+وَبِكَ نَمُوتُ،
+وَإِلَيْكَ النُّشُورُ.
+</div>
+
+<div class="meta">
+<span>مرة</span>
+<span>أبو داود 5068 والترمذي 3391</span>
+</div>
+
+<button class="fav" data-fav="m3" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🛡️</span>
+<span class="stext">
+<b>سيد الاستغفار</b>
+<small>مرة صباحًا ومرة مساءً</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ،
+خَلَقْتَنِي وَأَنَا عَبْدُكَ،
+وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ،
+أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ،
+أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ،
+وَأَبُوءُ لَكَ بِذَنْبِي،
+فَاغْفِرْ لِي؛
+فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.
+</div>
+
+<div class="hadith">
+<b>فضله:</b>
+من قاله موقنًا به نهارًا ثم مات قبل أن يمسي فهو من أهل الجنة،
+ومن قاله من الليل ثم مات قبل أن يصبح فهو من أهل الجنة.
+</div>
+
+<div class="meta">
+<span>مرة</span>
+<span>رواه البخاري 6306</span>
+</div>
+
+<button class="fav" data-fav="m4" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">💚</span>
+<span class="stext">
+<b>رضيت بالله ربًا</b>
+<small>3 مرات</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+رَضِيتُ بِاللَّهِ رَبًّا،
+وَبِالْإِسْلَامِ دِينًا،
+وَبِمُحَمَّدٍ ﷺ نَبِيًّا.
+</div>
+
+<div class="meta">
+<span>3 مرات</span>
+<span>أبو داود 5072 والترمذي 3389</span>
+</div>
+
+<button class="fav" data-fav="m5" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🛡️</span>
+<span class="stext">
+<b>بسم الله الذي لا يضر</b>
+<small>3 مرات</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ
+مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ
+وَلَا فِي السَّمَاءِ،
+وَهُوَ السَّمِيعُ الْعَلِيمُ.
+</div>
+
+<div class="meta">
+<span>3 مرات</span>
+<span>أبو داود 5088 والترمذي 3388</span>
+</div>
+
+<button class="fav" data-fav="m6" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🌿</span>
+<span class="stext">
+<b>العفو والعافية</b>
+<small>مرة واحدة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ
+وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ،
+اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ
+وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ
+وَأَهْلِي وَمَالِي،
+اللَّهُمَّ اسْتُرْ عَوْرَاتِي
+وَآمِنْ رَوْعَاتِي،
+اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ
+وَمِنْ خَلْفِي
+وَعَنْ يَمِينِي
+وَعَنْ شِمَالِي
+وَمِنْ فَوْقِي،
+وَأَعُوذُ بِعَظَمَتِكَ
+أَنْ أُغْتَالَ مِنْ تَحْتِي.
+</div>
+
+<div class="meta">
+<span>مرة</span>
+<span>أبو داود 5074 وابن ماجه 3871</span>
+</div>
+
+<button class="fav" data-fav="m7" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">📿</span>
+<span class="stext">
+<b>سبحان الله وبحمده</b>
+<small>100 مرة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+سُبْحَانَ اللَّهِ وَبِحَمْدِهِ.
+</div>
+
+<div class="hadith">
+<b>الدليل:</b>
+«مَنْ قَالَ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+فِي يَوْمٍ مِائَةَ مَرَّةٍ
+حُطَّتْ خَطَايَاهُ
+وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ».
+</div>
+
+<div class="meta">
+<span>100 مرة</span>
+<span>البخاري 6405 ومسلم 2691</span>
+</div>
+
+<button class="fav" data-fav="m8" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="evening">
+
+<div class="head">
+<h2>🌙 أذكار المساء</h2>
+<a href="#home" style="color:#f2cb77;text-decoration:none">العودة ↑</a>
+</div>
+
+<div class="accordion searchable">
+
+<details open>
+
+<summary>
+<span class="sicon">📖</span>
+<span class="stext">
+<b>الإخلاص والفلق والناس</b>
+<small>ثلاث مرات مساءً</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="surah">
+<b>سورة الإخلاص</b>
+<div class="dhikr">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ<br>
+قُلْ هُوَ اللَّهُ أَحَدٌ ۝
+اللَّهُ الصَّمَدُ ۝
+لَمْ يَلِدْ وَلَمْ يُولَدْ ۝
+وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ.
+</div>
+</div>
+
+<div class="surah">
+<b>سورة الفلق</b>
+<div class="dhikr">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ<br>
+قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝
+مِنْ شَرِّ مَا خَلَقَ ۝
+وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝
+وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝
+وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ.
+</div>
+</div>
+
+<div class="surah">
+<b>سورة الناس</b>
+<div class="dhikr">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ<br>
+قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝
+مَلِكِ النَّاسِ ۝
+إِلَهِ النَّاسِ ۝
+مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝
+الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝
+مِنَ الْجِنَّةِ وَالنَّاسِ.
+</div>
+</div>
+
+<div class="hadith">
+<b>الدليل:</b>
+قال النبي ﷺ لعبد الله بن خبيب:
+«قُلْ هُوَ اللَّهُ أَحَدٌ وَالْمُعَوِّذَتَيْنِ
+حِينَ تُمْسِي وَحِينَ تُصْبِحُ
+ثَلَاثَ مَرَّاتٍ
+تَكْفِيكَ مِنْ كُلِّ شَيْءٍ».
+</div>
+
+<div class="meta">
+<span>3 مرات</span>
+<span>أبو داود 5082</span>
+<span>الترمذي 3575 — حسن صحيح</span>
+</div>
+
+<button class="fav" data-fav="e1" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🌆</span>
+<span class="stext">
+<b>أمسينا وأمسى الملك لله</b>
+<small>مرة واحدة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ،
+وَالْحَمْدُ لِلَّهِ،
+لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ
+لَا شَرِيكَ لَهُ،
+لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ
+وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.
+رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ
+وَخَيْرَ مَا بَعْدَهَا،
+وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ
+وَشَرِّ مَا بَعْدَهَا،
+رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ
+وَسُوءِ الْكِبَرِ،
+رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ
+وَعَذَابٍ فِي الْقَبْرِ.
+</div>
+
+<div class="meta">
+<span>مرة</span>
+<span>رواه مسلم 2723</span>
+</div>
+
+<button class="fav" data-fav="e2" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🤲</span>
+<span class="stext">
+<b>اللهم بك أمسينا</b>
+<small>مرة واحدة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+اللَّهُمَّ بِكَ أَمْسَيْنَا،
+وَبِكَ أَصْبَحْنَا،
+وَبِكَ نَحْيَا،
+وَبِكَ نَمُوتُ،
+وَإِلَيْكَ الْمَصِيرُ.
+</div>
+
+<div class="meta">
+<span>مرة</span>
+<span>أبو داود 5068 والترمذي 3391</span>
+</div>
+
+<button class="fav" data-fav="e3" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🛡️</span>
+<span class="stext">
+<b>سيد الاستغفار</b>
+<small>مرة واحدة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+اللَّهُمَّ أَنْتَ رَبِّي
+لَا إِلَهَ إِلَّا أَنْتَ،
+خَلَقْتَنِي وَأَنَا عَبْدُكَ،
+وَأَنَا عَلَى عَهْدِكَ
+وَوَعْدِكَ مَا اسْتَطَعْتُ،
+أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ،
+أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ،
+وَأَبُوءُ لَكَ بِذَنْبِي،
+فَاغْفِرْ لِي؛
+فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.
+</div>
+
+<div class="meta">
+<span>مرة</span>
+<span>رواه البخاري 6306</span>
+</div>
+
+<button class="fav" data-fav="e4" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">💚</span>
+<span class="stext">
+<b>رضيت بالله ربًا</b>
+<small>3 مرات</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+رَضِيتُ بِاللَّهِ رَبًّا،
+وَبِالْإِسْلَامِ دِينًا،
+وَبِمُحَمَّدٍ ﷺ نَبِيًّا.
+</div>
+
+<div class="meta">
+<span>3 مرات</span>
+<span>أبو داود 5072 والترمذي 3389</span>
+</div>
+
+<button class="fav" data-fav="e5" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🛡️</span>
+<span class="stext">
+<b>بسم الله الذي لا يضر</b>
+<small>3 مرات</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ
+مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ
+وَلَا فِي السَّمَاءِ،
+وَهُوَ السَّمِيعُ الْعَلِيمُ.
+</div>
+
+<div class="meta">
+<span>3 مرات</span>
+<span>أبو داود 5088 والترمذي 3388</span>
+</div>
+
+<button class="fav" data-fav="e6" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">🌿</span>
+<span class="stext">
+<b>أعوذ بكلمات الله التامات</b>
+<small>3 مرات مساءً</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ
+مِنْ شَرِّ مَا خَلَقَ.
+</div>
+
+<div class="meta">
+<span>3 مرات</span>
+<span>رواه الترمذي 3604 — صحيح</span>
+</div>
+
+<button class="fav" data-fav="e7" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>
+<span class="sicon">📿</span>
+<span class="stext">
+<b>سبحان الله وبحمده</b>
+<small>100 مرة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+سُبْحَانَ اللَّهِ وَبِحَمْدِهِ.
+</div>
+
+<div class="meta">
+<span>100 مرة</span>
+<span>رواه مسلم 2692</span>
+</div>
+
+<button class="fav" data-fav="e8" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="other">
+
+<div class="head">
+<h2>الأذكار الأخرى</h2>
+<small>اضغط لفتح القسم</small>
+</div>
+
+<div class="accordion searchable">
+
+<details id="prayer">
+
+<summary>
+<span class="sicon">🕌</span>
+<span class="stext">
+<b>أذكار بعد الصلوات</b>
+<small>عقب الصلوات المفروضة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<h3>الاستغفار والسلام</h3>
+
+<div class="dhikr">
+أَسْتَغْفِرُ اللَّهَ،
+أَسْتَغْفِرُ اللَّهَ،
+أَسْتَغْفِرُ اللَّهَ.
+اللَّهُمَّ أَنْتَ السَّلَامُ
+وَمِنْكَ السَّلَامُ،
+تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ.
+</div>
+
+<div class="meta">
+<span>رواه مسلم 591</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<h3>التسبيح والتحميد والتكبير</h3>
+
+<div class="dhikr">
+سُبْحَانَ اللَّهِ 33 مرة،
+وَالْحَمْدُ لِلَّهِ 33 مرة،
+وَاللَّهُ أَكْبَرُ 33 مرة،
+ثم تمام المائة:
+لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ
+لَا شَرِيكَ لَهُ،
+لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ
+وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.
+</div>
+
+<div class="meta">
+<span>رواه مسلم 597</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="sleep">
+
+<summary>
+<span class="sicon">🛏️</span>
+<span class="stext">
+<b>أذكار النوم والاستيقاظ</b>
+<small>ومنها تسبيح فاطمة رضي الله عنها</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<h3>عند النوم</h3>
+
+<div class="dhikr">
+بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا.
+</div>
+
+<div class="meta">
+<span>رواه البخاري 6324</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<h3>تسبيح فاطمة رضي الله عنها — مع الحديث</h3>
+
+<div class="dhikr">
+سُبْحَانَ اللَّهِ 33 مرة،
+وَالْحَمْدُ لِلَّهِ 33 مرة،
+وَاللَّهُ أَكْبَرُ 34 مرة،
+عند أخذ المضجع.
+</div>
+
+<div class="hadith">
+<b>الحديث:</b>
+شكت فاطمة رضي الله عنها ما تلقى من أثر الرحى،
+وطلبت خادمًا،
+فقال النبي ﷺ لها ولعلي رضي الله عنه:
+«أَلَا أَدُلُّكُمَا عَلَى خَيْرٍ مِمَّا سَأَلْتُمَا؟
+إِذَا أَخَذْتُمَا مَضَاجِعَكُمَا
+فَكَبِّرَا اللَّهَ أَرْبَعًا وَثَلَاثِينَ،
+وَاحْمَدَا ثَلَاثًا وَثَلَاثِينَ،
+وَسَبِّحَا ثَلَاثًا وَثَلَاثِينَ؛
+فَهُوَ خَيْرٌ لَكُمَا مِنْ خَادِمٍ».
+</div>
+
+<div class="meta">
+<span>33 تسبيحًا</span>
+<span>33 تحميدًا</span>
+<span>34 تكبيرًا</span>
+<span>رواه البخاري 3705، ومسلم 2728</span>
+</div>
+
+<button class="fav" data-fav="fatima" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+<article class="card">
+
+<h3>عند الاستيقاظ</h3>
+
+<div class="dhikr">
+الْحَمْدُ لِلَّهِ
+الَّذِي أَحْيَانَا
+بَعْدَ مَا أَمَاتَنَا
+وَإِلَيْهِ النُّشُورُ.
+</div>
+
+<div class="meta">
+<span>رواه البخاري 6312</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="house">
+
+<summary>
+<span class="sicon">🏠</span>
+<span class="stext">
+<b>أذكار المنزل</b>
+<small>الدخول والخروج</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<h3>الخروج من المنزل</h3>
+
+<div class="dhikr">
+بِسْمِ اللَّهِ،
+تَوَكَّلْتُ عَلَى اللَّهِ،
+لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ.
+</div>
+
+<div class="meta">
+<span>أبو داود 5095 والترمذي 3426</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<h3>عند دخول المنزل</h3>
+
+<div class="dhikr">
+يذكر المسلم اسم الله عند دخوله
+وعند طعامه،
+ويسلِّم على أهل البيت.
+</div>
+
+<div class="hadith">
+<b>الدليل:</b>
+ثبت في صحيح مسلم أن ذكر الله عند دخول البيت
+وعند الطعام يمنع الشيطان من المبيت والعشاء فيه.
+</div>
+
+<div class="meta">
+<span>رواه مسلم 2018</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="food">
+
+<summary>
+<span class="sicon">🍽️</span>
+<span class="stext">
+<b>أذكار الطعام والشراب</b>
+<small>قبل الطعام وبعده</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<h3>قبل الطعام</h3>
+
+<div class="dhikr">
+بِسْمِ اللَّهِ.
+</div>
+
+<div class="hadith">
+<b>الدليل:</b>
+قال النبي ﷺ لعمر بن أبي سلمة:
+«يَا غُلَامُ،
+سَمِّ اللَّهَ،
+وَكُلْ بِيَمِينِكَ،
+وَكُلْ مِمَّا يَلِيكَ».
+</div>
+
+<div class="meta">
+<span>متفق عليه</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<h3>إن نسي التسمية</h3>
+
+<div class="dhikr">
+بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ.
+</div>
+
+<div class="meta">
+<span>أبو داود 3767 والترمذي 1858</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<h3>بعد الطعام</h3>
+
+<div class="dhikr">
+الْحَمْدُ لِلَّهِ
+الَّذِي أَطْعَمَنِي هَذَا
+وَرَزَقَنِيهِ
+مِنْ غَيْرِ حَوْلٍ مِنِّي
+وَلَا قُوَّةٍ.
+</div>
+
+<div class="meta">
+<span>أبو داود 4023 والترمذي 3458</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="clothes">
+
+<summary>
+<span class="sicon">👕</span>
+<span class="stext">
+<b>أذكار اللباس</b>
+<small>عند لبس الثوب</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+الْحَمْدُ لِلَّهِ
+الَّذِي كَسَانِي هَذَا الثَّوْبَ
+وَرَزَقَنِيهِ
+مِنْ غَيْرِ حَوْلٍ مِنِّي
+وَلَا قُوَّةٍ.
+</div>
+
+<div class="meta">
+<span>أبو داود 4023 — حديث حسن</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="travel">
+
+<summary>
+<span class="sicon">✈️</span>
+<span class="stext">
+<b>أذكار السفر</b>
+<small>دعاء السفر كاملًا والرجوع منه</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<h3>دعاء السفر — كامل</h3>
+
+<div class="dhikr">
+اللَّهُ أَكْبَرُ،
+اللَّهُ أَكْبَرُ،
+اللَّهُ أَكْبَرُ.
+
+﴿سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا
+وَمَا كُنَّا لَهُ مُقْرِنِينَ ۝
+وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ﴾.
+
+اللَّهُمَّ إِنَّا نَسْأَلُكَ
+فِي سَفَرِنَا هَذَا
+الْبِرَّ وَالتَّقْوَى،
+وَمِنَ الْعَمَلِ مَا تَرْضَى.
+
+اللَّهُمَّ هَوِّنْ عَلَيْنَا
+سَفَرَنَا هَذَا،
+وَاطْوِ عَنَّا بُعْدَهُ.
+
+اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ،
+وَالْخَلِيفَةُ فِي الْأَهْلِ.
+
+اللَّهُمَّ إِنِّي أَعُوذُ بِكَ
+مِنْ وَعْثَاءِ السَّفَرِ،
+وَكَآبَةِ الْمَنْظَرِ،
+وَسُوءِ الْمُنْقَلَبِ
+فِي الْمَالِ وَالْأَهْلِ.
+</div>
+
+<div class="hadith">
+<b>عند الرجوع:</b>
+يقول هذا الدعاء،
+ويزيد:
+«آيِبُونَ،
+تَائِبُونَ،
+عَابِدُونَ،
+لِرَبِّنَا حَامِدُونَ».
+</div>
+
+<div class="meta">
+<span>رواه مسلم 1342</span>
+</div>
+
+<button class="fav" data-fav="travel" onclick="toggleFav(this)">♡ حفظ</button>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="weather">
+
+<summary>
+<span class="sicon">🌧️</span>
+<span class="stext">
+<b>أذكار المطر والريح</b>
+<small>المطر وشدة الريح</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+<h3>عند نزول المطر</h3>
+<div class="dhikr">اللَّهُمَّ صَيِّبًا نَافِعًا.</div>
+<div class="meta"><span>رواه البخاري 1032</span></div>
+</article>
+
+<article class="card">
+<h3>بعد المطر</h3>
+<div class="dhikr">مُطِرْنَا بِفَضْلِ اللَّهِ وَرَحْمَتِهِ.</div>
+<div class="meta"><span>متفق عليه</span></div>
+</article>
+
+<article class="card">
+
+<h3>عند شدة الريح</h3>
+
+<div class="dhikr">
+اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا،
+وَخَيْرَ مَا فِيهَا،
+وَخَيْرَ مَا أُرْسِلَتْ بِهِ،
+وَأَعُوذُ بِكَ مِنْ شَرِّهَا،
+وَشَرِّ مَا فِيهَا،
+وَشَرِّ مَا أُرْسِلَتْ بِهِ.
+</div>
+
+<div class="meta">
+<span>رواه مسلم 899</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="illness">
+
+<summary>
+<span class="sicon">💗</span>
+<span class="stext">
+<b>أذكار المرض والكرب</b>
+<small>الدعاء والرقية</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+<h3>للمريض</h3>
+<div class="dhikr">لَا بَأْسَ، طَهُورٌ إِنْ شَاءَ اللَّهُ.</div>
+<div class="meta"><span>رواه البخاري 3616</span></div>
+</article>
+
+<article class="card">
+
+<h3>عند الألم</h3>
+
+<div class="dhikr">
+يضع يده على موضع الألم ويقول:
+بِسْمِ اللَّهِ ثلاث مرات،
+ثم يقول سبع مرات:
+
+أَعُوذُ بِاللَّهِ وَقُدْرَتِهِ
+مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ.
+</div>
+
+<div class="meta">
+<span>رواه مسلم 2202</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="mosque">
+
+<summary>
+<span class="sicon">🕋</span>
+<span class="stext">
+<b>أذكار المسجد</b>
+<small>الدخول والخروج</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+<h3>عند الدخول</h3>
+<div class="dhikr">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ.</div>
+<div class="meta"><span>رواه مسلم 713</span></div>
+</article>
+
+<article class="card">
+<h3>عند الخروج</h3>
+<div class="dhikr">اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ.</div>
+<div class="meta"><span>رواه مسلم 713</span></div>
+</article>
+
+</div>
+
+</details>
+
+<details id="adhan">
+
+<summary>
+<span class="sicon">🔊</span>
+<span class="stext">
+<b>أذكار الأذان</b>
+<small>الإجابة والدعاء بعده</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<h3>إجابة المؤذن</h3>
+
+<div class="dhikr">
+يقول مثل ما يقول المؤذن،
+وعند «حي على الصلاة»
+و«حي على الفلاح»
+يقول:
+
+لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ.
+</div>
+
+<div class="meta">
+<span>رواه مسلم 385</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<h3>بعد الأذان</h3>
+
+<div class="dhikr">
+اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ،
+وَالصَّلَاةِ الْقَائِمَةِ،
+آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ،
+وَابْعَثْهُ مَقَامًا مَحْمُودًا
+الَّذِي وَعَدْتَهُ.
+</div>
+
+<div class="meta">
+<span>رواه البخاري 614</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="bathroom">
+
+<summary>
+<span class="sicon">🚪</span>
+<span class="stext">
+<b>أذكار الخلاء</b>
+<small>قبل الدخول وبعد الخروج</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+<h3>قبل الدخول</h3>
+<div class="dhikr">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ.</div>
+<div class="meta"><span>متفق عليه</span></div>
+</article>
+
+<article class="card">
+<h3>بعد الخروج</h3>
+<div class="dhikr">غُفْرَانَكَ.</div>
+<div class="meta"><span>أبو داود 30 والترمذي 7</span></div>
+</article>
+
+</div>
+
+</details>
+
+<details id="wudu">
+
+<summary>
+<span class="sicon">💧</span>
+<span class="stext">
+<b>الذكر بعد الوضوء</b>
+<small>بعد الفراغ من الطهارة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ
+وَحْدَهُ لَا شَرِيكَ لَهُ،
+وَأَشْهَدُ أَنَّ مُحَمَّدًا
+عَبْدُهُ وَرَسُولُهُ.
+</div>
+
+<div class="hadith">
+<b>فضله:</b>
+تُفتح له أبواب الجنة الثمانية
+يدخل من أيها شاء.
+</div>
+
+<div class="meta">
+<span>رواه مسلم 234</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="sneeze">
+
+<summary>
+<span class="sicon">🌿</span>
+<span class="stext">
+<b>أذكار العطاس</b>
+<small>الحمد والتشميت</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<h3>إذا عطس</h3>
+<div class="dhikr">الْحَمْدُ لِلَّهِ.</div>
+
+<h3 style="margin-top:12px">تشميت العاطس</h3>
+
+<div class="dhikr">
+يَرْحَمُكَ اللَّهُ.
+
+فيجيب العاطس:
+
+يَهْدِيكُمُ اللَّهُ
+وَيُصْلِحُ بَالَكُمْ.
+</div>
+
+<div class="meta">
+<span>رواه البخاري 6224</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="gathering">
+
+<summary>
+<span class="sicon">👥</span>
+<span class="stext">
+<b>كفارة المجلس</b>
+<small>عند القيام من المجلس</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<div class="dhikr">
+سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ،
+أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ،
+أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ.
+</div>
+
+<div class="meta">
+<span>أبو داود 4859 والترمذي 3433</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="distress">
+
+<summary>
+<span class="sicon">🤲</span>
+<span class="stext">
+<b>أذكار الهم والحزن والكرب</b>
+<small>أدعية صحيحة جامعة</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<h3>دعاء الكرب</h3>
+
+<div class="dhikr">
+لَا إِلَهَ إِلَّا اللَّهُ الْعَظِيمُ الْحَلِيمُ،
+لَا إِلَهَ إِلَّا اللَّهُ رَبُّ الْعَرْشِ الْعَظِيمِ،
+لَا إِلَهَ إِلَّا اللَّهُ رَبُّ السَّمَاوَاتِ
+وَرَبُّ الْأَرْضِ
+وَرَبُّ الْعَرْشِ الْكَرِيمِ.
+</div>
+
+<div class="meta">
+<span>متفق عليه</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<h3>دعاء الهم والحزن</h3>
+
+<div class="dhikr">
+اللَّهُمَّ إِنِّي أَعُوذُ بِكَ
+مِنَ الْهَمِّ وَالْحَزَنِ،
+وَأَعُوذُ بِكَ
+مِنَ الْعَجْزِ وَالْكَسَلِ،
+وَأَعُوذُ بِكَ
+مِنَ الْجُبْنِ وَالْبُخْلِ،
+وَأَعُوذُ بِكَ
+مِنْ غَلَبَةِ الدَّيْنِ
+وَقَهْرِ الرِّجَالِ.
+</div>
+
+<div class="meta">
+<span>رواه البخاري 6369</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+<details id="general">
+
+<summary>
+<span class="sicon">✨</span>
+<span class="stext">
+<b>أذكار مطلقة</b>
+<small>تسبيح وتهليل واستغفار</small>
+</span>
+</summary>
+
+<div class="inside">
+
+<article class="card">
+
+<h3>التهليل مائة مرة</h3>
+
+<div class="dhikr">
+لَا إِلَهَ إِلَّا اللَّهُ
+وَحْدَهُ لَا شَرِيكَ لَهُ،
+لَهُ الْمُلْكُ
+وَلَهُ الْحَمْدُ،
+وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.
+</div>
+
+<div class="meta">
+<span>100 مرة في اليوم</span>
+<span>متفق عليه</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<h3>كلمتان خفيفتان</h3>
+
+<div class="dhikr">
+سُبْحَانَ اللَّهِ وَبِحَمْدِهِ،
+سُبْحَانَ اللَّهِ الْعَظِيمِ.
+</div>
+
+<div class="meta">
+<span>متفق عليه</span>
+</div>
+
+</article>
+
+</div>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="tasbih">
+
+<div class="head">
+<h2>📿 مسبحتي</h2>
+<small>اضغط الدائرة نفسها للعد</small>
+</div>
+
+<div class="tasbox">
+
+<button
+class="tasbih-tap"
+id="tasbihTap"
+type="button"
+onclick="tasbihPlus()"
+>
+
+<span class="num" id="tasbihCount">0</span>
+
+<span class="word" id="tasbihWord">
+سبحان الله
+</span>
+
+<span class="tap-hint">
+اضغط هنا للتسبيح +1
+</span>
+
+</button>
+
+<div class="targets">
+
+<button type="button" id="t33" onclick="setTarget(33)">33</button>
+
+<button type="button" id="t100" onclick="setTarget(100)">100</button>
+
+<button type="button" id="t300" onclick="setTarget(300)">300</button>
+
+<button type="button" id="t0" onclick="setTarget(0)">∞</button>
+
+</div>
+
+<div class="actions">
+
+<button type="button" onclick="resetTasbih()">
+إعادة
+</button>
+
+<button type="button" onclick="changeTasbihWord()">
+تغيير الذكر
+</button>
+
+<button type="button" onclick="tasbihMinus()">
+−1
+</button>
+
+</div>
+
+<div
+id="tasbihStatus"
+style="margin-top:10px;color:#bcd4cb;font-size:.82rem"
+>
+الهدف: 33
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="favorites">
+
+<div class="head">
+<h2>♡ المفضلة</h2>
+<small>محفوظة على جهازك</small>
+</div>
+
+<div class="notice" id="favoritesBox">
+لم تضف أذكارًا إلى المفضلة بعد.
+</div>
+
+</section>
+
+<section class="section" id="about">
+
+<div class="head">
+<h2>عن المشروع</h2>
+<small>روضة الأذكار</small>
+</div>
+
+<div class="notice">
+«روضة الأذكار» إحدى مشاريع
+<b>منهاج الهدى</b>.
+يعنى بجمع الأذكار الصحيحة
+مع مصادرها وفضائلها،
+وتجنب الاختصار المخل
+أو نسبة فضل لم يثبت.
+</div>
+
+</section>
+
+<footer class="footer">
+
+<b>روضة الأذكار | منهاج الهدى</b>
+
+<br>
+
+خدمةً لذكر الله ونشر العلم النافع
+
+</footer>
+
+</div>
+
+<div class="bottom">
+
+<nav>
+
+<a href="#home">
+<span>⌂</span>
+الرئيسية
+</a>
+
+<a href="#categories">
+<span>▦</span>
+الأذكار
+</a>
+
+<a href="#tasbih">
+<span>◌</span>
+مسبحتي
+</a>
+
+<a href="#favorites">
+<span>♡</span>
+المفضلة
+</a>
+
+<a href="#about">
+<span>•••</span>
+المزيد
+</a>
+
+</nav>
+
+</div>
+
+<script>
+
+var tasCount = 0;
+var tasTarget = 33;
+var tasWordIndex = 0;
+
+var tasWords = [
+'سبحان الله',
+'الحمد لله',
+'الله أكبر',
+'لا إله إلا الله',
+'أستغفر الله'
+];
+
+function sget(k,d){
+try{
+var v = localStorage.getItem(k);
+return v === null ? d : v;
+}catch(e){
+return d;
+}
+}
+
+function sset(k,v){
+try{
+localStorage.setItem(k,v);
+}catch(e){}
+}
+
+function initApp(){
+
+tasCount = parseInt(sget('ra_count','0'),10) || 0;
+
+tasTarget = parseInt(sget('ra_target','33'),10);
+
+if(isNaN(tasTarget)){
+tasTarget = 33;
+}
+
+tasWordIndex = parseInt(sget('ra_word','0'),10) || 0;
+
+if(tasWordIndex < 0 || tasWordIndex >= tasWords.length){
+tasWordIndex = 0;
+}
+
+renderTasbih();
+restoreFavorites();
+openHashDetails();
+
+}
+
+function renderTasbih(){
+
+document.getElementById('tasbihCount').textContent =
+String(tasCount);
+
+document.getElementById('tasbihWord').textContent =
+tasWords[tasWordIndex];
+
+var status = document.getElementById('tasbihStatus');
+
+if(tasTarget > 0){
+
+status.textContent =
+'الهدف: ' +
+tasTarget +
+' — المتبقي: ' +
+Math.max(tasTarget - tasCount,0);
+
+}else{
+
+status.textContent = 'بدون هدف';
+
+}
+
+var ids = [0,33,100,300];
+
+for(var i=0;i<ids.length;i++){
+
+var el = document.getElementById('t'+ids[i]);
+
+if(el){
+
+if(ids[i] === tasTarget){
+el.classList.add('on');
+}else{
+el.classList.remove('on');
+}
+
+}
+
+}
+
+sset('ra_count',String(tasCount));
+sset('ra_target',String(tasTarget));
+sset('ra_word',String(tasWordIndex));
+
+}
+
+function tasbihPlus(){
+
+tasCount = tasCount + 1;
+
+renderTasbih();
+
+if(
+tasTarget > 0 &&
+tasCount === tasTarget &&
+navigator.vibrate
+){
+
+try{
+navigator.vibrate([80,50,130]);
+}catch(e){}
+
+}
+
+}
+
+function tasbihMinus(){
+
+if(tasCount > 0){
+tasCount = tasCount - 1;
+}
+
+renderTasbih();
+
+}
+
+function resetTasbih(){
+
+tasCount = 0;
+
+renderTasbih();
+
+}
+
+function setTarget(n){
+
+tasTarget = n;
+
+tasCount = 0;
+
+renderTasbih();
+
+}
+
+function changeTasbihWord(){
+
+tasWordIndex =
+(tasWordIndex + 1) %
+tasWords.length;
+
+tasCount = 0;
+
+renderTasbih();
+
+}
+
+function getFavs(){
+
+try{
+
+var a =
+JSON.parse(
+sget('ra_favs','[]')
+);
+
+return Object.prototype.toString.call(a) === '[object Array]' ? a : [];
+
+}catch(e){
+
+return [];
+
+}
+
+}
+
+function toggleFav(btn){
+
+var id = btn.getAttribute('data-fav');
+
+var a = getFavs();
+
+var p = a.indexOf(id);
+
+if(p < 0){
+a.push(id);
+}else{
+a.splice(p,1);
+}
+
+sset('ra_favs',JSON.stringify(a));
+
+restoreFavorites();
+
+}
+
+function restoreFavorites(){
+
+var a = getFavs();
+
+var buttons =
+document.querySelectorAll('[data-fav]');
+
+var lines = [];
+
+for(var i=0;i<buttons.length;i++){
+
+var b = buttons[i];
+
+var id =
+b.getAttribute('data-fav');
+
+var on =
+a.indexOf(id) >= 0;
+
+b.textContent =
+on
+?
+'♥ محفوظ'
+:
+'♡ حفظ';
+
+if(on){
+b.classList.add('on');
+}else{
+b.classList.remove('on');
+}
+
+if(on){
+
+var card =
+b.closest
+?
+b.closest('.card')
+:
+null;
+
+var title =
+card
+?
+card.querySelector('h3')
+:
+null;
+
+var text =
+card
+?
+card.querySelector('.dhikr')
+:
+null;
+
+lines.push(
+'<div style="padding:9px 0;border-bottom:1px solid rgba(242,203,119,.13)">' +
+'<b style="color:#f2cb77">' +
+(title ? title.textContent : 'ذكر محفوظ') +
+'</b>' +
+'<div style="margin-top:4px">' +
+(text ? text.textContent : '') +
+'</div>' +
+'</div>'
+);
+
+}
+
+}
+
+document.getElementById('favoritesBox').innerHTML =
+lines.length
+?
+lines.join('')
+:
+'لم تضف أذكارًا إلى المفضلة بعد.';
+
+}
+
+function normalizeArabic(s){
+
+return (s || '')
+.toLowerCase()
+.replace(/[ًٌٍَُِّْـ]/g,'')
+.trim();
+
+}
+
+function searchApp(){
+
+var q =
+normalizeArabic(
+document.getElementById('searchInput').value
+);
+
+var items =
+document.querySelectorAll(
+'.searchable details,.searchable .cat'
+);
+
+for(var i=0;i<items.length;i++){
+
+var hit =
+normalizeArabic(
+items[i].textContent
+)
+.indexOf(q) >= 0;
+
+if(!q || hit){
+items[i].classList.remove('hidden');
+}else{
+items[i].classList.add('hidden');
+}
+
+}
+
+}
+
+function clearSearch(){
+
+document.getElementById('searchInput').value = '';
+
+searchApp();
+
+}
+
+function openHashDetails(){
+
+var id =
+location.hash
+?
+location.hash.substring(1)
+:
+'';
+
+if(!id){
+return;
+}
+
+var el =
+document.getElementById(id);
+
+if(
+el &&
+el.tagName &&
+el.tagName.toLowerCase() === 'details'
+){
+
+el.open = true;
+
+}
+
+}
+
+window.onhashchange = openHashDetails;
+
+if(document.readyState === 'loading'){
+
+document.addEventListener(
+'DOMContentLoaded',
+initApp
+);
+
+}else{
+
+initApp();
+
+}
+
+</script>
+
 </body>
 </html>

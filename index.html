@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>فضائل الأعمال اليومية</title>
 
-  <!-- خط Cairo العصري -->
+  <!-- خط Cairo بجميع أوزانه لقراءة مريحة وواضحة جداً -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome 6 للأيقونات الحديثة والجميلة -->
+  <!-- أيقونات Font Awesome 6 الحديثة -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <script>
@@ -21,27 +21,26 @@
       theme: {
         extend: {
           colors: {
-            app: {
-              bg: '#F8FAFC',
-              card: '#FFFFFF',
-              primary: '#0F766E',      // زمردي عميق مشرق
-              primaryLight: '#F0FDFA',
-              gold: '#D97706',         // عنبري ذهبي ساطع
-              goldLight: '#FEF3C7',
-              textDark: '#0F172A',
-              textMuted: '#475569',
-              border: '#E2E8F0'
+            // الثلاثية اللونية المتناسقة الفاخرة
+            navy: {
+              DEFAULT: '#0A192F',
+              light: '#112240',
+              lighter: '#1E3A5F',
+              dark: '#060D1A'
+            },
+            gold: {
+              DEFAULT: '#F59E0B',
+              light: '#FDE68A',
+              dark: '#B45309'
+            },
+            emerald: {
+              DEFAULT: '#10B981',
+              light: '#A7F3D0',
+              dark: '#047857'
             }
           },
           fontFamily: {
-            sans: ['Cairo', 'sans-serif'],
-            cairo: ['Cairo', 'sans-serif']
-          },
-          boxShadow: {
-            'soft': '0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.03)',
-            'card-hover': '0 20px 30px -10px rgba(15, 118, 110, 0.12)',
-            'btn-gold': '0 8px 20px -4px rgba(217, 119, 6, 0.35)',
-            'btn-emerald': '0 8px 20px -4px rgba(16, 185, 129, 0.35)'
+            sans: ['Cairo', 'sans-serif']
           }
         }
       }
@@ -50,48 +49,45 @@
 
   <style>
     body {
-      background-color: #F8FAFC;
-      background-image: 
-        radial-gradient(circle at 10% 10%, rgba(217, 119, 6, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 90% 90%, rgba(15, 118, 110, 0.05) 0%, transparent 50%);
+      background-color: #0A192F;
       font-family: 'Cairo', sans-serif;
     }
     .custom-scroll::-webkit-scrollbar {
-      height: 5px;
+      height: 6px;
     }
     .custom-scroll::-webkit-scrollbar-thumb {
-      background: #CBD5E1;
+      background: #1E3A5F;
       border-radius: 9999px;
     }
   </style>
 </head>
-<body class="text-app-textDark min-h-screen pb-20">
+<body class="text-slate-100 min-h-screen pb-24 selection:bg-gold selection:text-navy">
 
-  <!-- شريط الملاحة العلوي الأنيق والمشرق -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-4 lg:px-8 py-3.5 shadow-sm">
-    <div class="max-w-6xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-400 flex items-center justify-center text-white shadow-btn-gold">
-          <i class="fa-solid fa-kaaba text-lg"></i>
+  <!-- شريط الملاحة العلوي -->
+  <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur-md border-b border-navy-lighter px-4 lg:px-8 py-4 shadow-lg">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gold text-navy flex items-center justify-center text-xl shadow-md font-black">
+          <i class="fa-solid fa-kaaba"></i>
         </div>
         <div>
-          <h1 class="text-base font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+          <h1 class="text-xl font-extrabold text-white tracking-wide flex items-center gap-2">
             فضائل الأعمال اليومية
-            <span class="text-[11px] bg-emerald-50 text-emerald-700 border border-emerald-200/80 px-2.5 py-0.5 rounded-full font-bold">
-              <i class="fa-solid fa-circle-check text-[9px] ml-1"></i> صحيح وموثق
+            <span class="text-xs bg-emerald/20 text-emerald-light border border-emerald/40 px-2.5 py-0.5 rounded-full font-bold">
+              مُحقّق
             </span>
           </h1>
-          <p class="text-xs text-slate-500 font-medium">سياحة الروح في صحيح الأثر وتجارب السلف الصالح</p>
+          <p class="text-sm text-slate-300 font-medium">سياحة الروح في صحيح الأثر وتجارب السلف الصالح</p>
         </div>
       </div>
 
       <!-- مقياس الإنجاز اليومي -->
-      <div class="flex items-center gap-3 bg-slate-50 border border-slate-200/80 rounded-2xl px-4 py-2">
+      <div class="flex items-center gap-3 bg-navy-light border border-navy-lighter rounded-2xl px-4 py-2">
         <div class="text-left">
-          <div class="text-[11px] font-semibold text-slate-400">إنجازك اليومي</div>
-          <div class="text-sm font-black text-slate-800"><span id="completed-count">0</span> من <span id="total-count">0</span></div>
+          <div class="text-xs font-bold text-slate-400">الإنجاز اليومي</div>
+          <div class="text-base font-black text-gold"><span id="completed-count">0</span> / <span id="total-count">0</span></div>
         </div>
-        <div class="w-10 h-10 rounded-full bg-emerald-50 border-2 border-emerald-500 flex items-center justify-center text-xs font-bold text-emerald-700 shadow-sm" id="progress-percent">
+        <div class="w-11 h-11 rounded-full bg-emerald/20 border-2 border-emerald flex items-center justify-center text-sm font-black text-emerald" id="progress-percent">
           0%
         </div>
       </div>
@@ -99,29 +95,29 @@
   </header>
 
   <!-- الحاوية الأساسية -->
-  <main class="max-w-6xl mx-auto px-4 lg:px-8 pt-6">
+  <main class="max-w-5xl mx-auto px-4 lg:px-8 pt-6">
 
-    <!-- بطاقة التوجيه والدرة اليومية -->
+    <!-- بطاقة الدرة اليومية والوقت المستحب -->
     <section class="mb-8">
-      <div class="relative overflow-hidden rounded-3xl p-6 lg:p-8 bg-gradient-to-br from-white via-white to-amber-50/40 border border-amber-200/60 shadow-soft">
+      <div class="rounded-3xl p-6 lg:p-8 bg-navy-light border-2 border-navy-lighter shadow-xl">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div class="space-y-2 max-w-2xl">
-            <span class="inline-flex items-center gap-2 text-xs font-bold text-amber-700 bg-amber-100/70 px-3 py-1 rounded-full">
-              <i class="fa-solid fa-quote-right text-amber-600"></i> درة اليوم من مشكاة السلف
+          <div class="space-y-3 max-w-2xl">
+            <span class="inline-flex items-center gap-2 text-sm font-bold text-gold bg-gold/15 px-3 py-1 rounded-full border border-gold/30">
+              <i class="fa-solid fa-quote-right"></i> درة اليوم من أقوال السلف
             </span>
-            <p class="text-lg md:text-xl font-bold text-slate-800 leading-relaxed pt-1">
+            <p class="text-xl md:text-2xl font-bold text-white leading-relaxed pt-1">
               «الذكر للقلب مثل الماء للسمك، فكيف يكون حال السمك إذا فارق الماء؟ ومن حَصَّن يومه بالأوراد المأثورة كان في حصنٍ حصين لا تنفذ إليه سهام العدو.»
             </p>
-            <div class="text-xs font-semibold text-slate-500">— الإمام شمس الدين ابن القيم رحمه الله (الوابل الصيب)</div>
+            <div class="text-sm font-bold text-slate-300">— الإمام شمس الدين ابن القيم رحمه الله (الوابل الصيب)</div>
           </div>
 
-          <div class="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-sm flex items-center gap-3.5 shrink-0">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 text-white flex items-center justify-center text-xl shadow-md">
+          <div class="bg-navy rounded-2xl p-4 border border-navy-lighter flex items-center gap-4 shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-emerald text-navy flex items-center justify-center text-2xl font-bold shadow-md">
               <i class="fa-regular fa-clock"></i>
             </div>
             <div>
-              <div class="text-[11px] font-bold text-slate-400">المحطة المستحبة الآن</div>
-              <div class="text-sm font-black text-teal-800" id="time-station-label">أوراد النهار والسعي</div>
+              <div class="text-xs font-bold text-slate-400">المحطة المستحبة الآن</div>
+              <div class="text-base font-black text-emerald" id="time-station-label">أوراد النهار والسعي</div>
             </div>
           </div>
         </div>
@@ -129,29 +125,29 @@
     </section>
 
     <!-- شريط الفلاتر والتصنيفات -->
-    <nav class="flex items-center gap-2.5 overflow-x-auto pb-4 custom-scroll mb-6" id="category-tabs">
-      <button onclick="filterCategory('all')" class="category-btn active px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all bg-emerald-700 text-white shadow-md shadow-emerald-700/20 whitespace-nowrap">
+    <nav class="flex items-center gap-2.5 overflow-x-auto pb-4 custom-scroll mb-8" id="category-tabs">
+      <button onclick="filterCategory('all')" class="category-btn active px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-emerald text-navy shadow-lg whitespace-nowrap">
         <i class="fa-solid fa-shapes"></i> كافة الأوراد والأعمال
       </button>
-      <button onclick="filterCategory('hundred')" class="category-btn px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-600 hover:border-amber-400 whitespace-nowrap">
-        <i class="fa-solid fa-certificate text-amber-500"></i> المئويات (100 مرة)
+      <button onclick="filterCategory('hundred')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-gold whitespace-nowrap">
+        <i class="fa-solid fa-certificate text-gold"></i> المئويات (100 مرة)
       </button>
-      <button onclick="filterCategory('morning')" class="category-btn px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-600 hover:border-amber-400 whitespace-nowrap">
-        <i class="fa-solid fa-sun text-amber-500"></i> الفجر والاستيقاظ
+      <button onclick="filterCategory('morning')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-gold whitespace-nowrap">
+        <i class="fa-solid fa-sun text-gold"></i> الفجر والاستيقاظ
       </button>
-      <button onclick="filterCategory('prayer')" class="category-btn px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-600 hover:border-emerald-500 whitespace-nowrap">
-        <i class="fa-solid fa-mosque text-teal-600"></i> دبر الصلوات المكتوبة
+      <button onclick="filterCategory('prayer')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-emerald whitespace-nowrap">
+        <i class="fa-solid fa-mosque text-emerald"></i> دبر الصلوات المكتوبة
       </button>
-      <button onclick="filterCategory('actions')" class="category-btn px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-600 hover:border-blue-500 whitespace-nowrap">
-        <i class="fa-solid fa-heart-pulse text-blue-500"></i> سنن وأعمال النهار
+      <button onclick="filterCategory('actions')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-gold whitespace-nowrap">
+        <i class="fa-solid fa-heart-pulse text-gold"></i> سنن وأعمال النهار
       </button>
-      <button onclick="filterCategory('night')" class="category-btn px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-600 hover:border-indigo-500 whitespace-nowrap">
-        <i class="fa-solid fa-moon text-indigo-500"></i> المساء والنوم
+      <button onclick="filterCategory('night')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-emerald whitespace-nowrap">
+        <i class="fa-solid fa-moon text-emerald"></i> المساء والنوم
       </button>
     </nav>
 
-    <!-- شبكة بطاقات الأذكار المضيئة -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="cards-grid"></div>
+    <!-- شبكة بطاقات الأذكار -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="cards-grid"></div>
 
   </main>
 
@@ -162,7 +158,6 @@
         category: 'hundred',
         badge: 'مئوية مباركة',
         icon: 'fa-solid fa-hands-praying',
-        iconBg: 'bg-amber-100 text-amber-600',
         title: 'التسبيح المطلق وحط الخطايا',
         text: '«سُبْحَانَ اللَّهِ وَبِحَمْدِهِ»',
         targetCount: 100,
@@ -174,23 +169,21 @@
       {
         id: 2,
         category: 'hundred',
-        badge: 'حرز اليوم وعتق الرقاب',
+        badge: 'حرز اليوم وحصن الشيطان',
         icon: 'fa-solid fa-shield-halved',
-        iconBg: 'bg-amber-100 text-amber-600',
-        title: 'التهليل التام وحصن الشيطان',
+        title: 'التهليل التام وعتق الرقاب',
         text: '«لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ»',
         targetCount: 100,
         currentCount: 0,
         hadith: 'قال ﷺ: «كَانَتْ لَهُ عَدْلَ عَشْرِ رِقَابٍ، وَكُتِبَتْ لَهُ مِائَةُ حَسَنَةٍ، وَمُحِيَتْ عَنْهُ مِائَةُ سَيِّئَةٍ، وَكَانَتْ لَهُ حِرْزًا مِنَ الشَّيْطَانِ يَوْمَهُ ذَلِكَ حَتَّى يُمْسِيَ».',
         source: 'متفق عليه: صحيح البخاري (3293)، صحيح مسلم (2691)',
-        salafQuote: 'قال الفضيل بن عياض: "من قالها مائة مرة بنية صادقة عَصَمه الله في يومه من نزغات الهوى والوسواس".'
+        salafQuote: 'قال الفضيل بن عياض: "من قالها مائة مرة بنية صادقة عصمه الله في يومه من نزغات الهوى والوسواس".'
       },
       {
         id: 3,
         category: 'hundred',
         badge: 'مئوية مباركة',
         icon: 'fa-solid fa-arrows-rotate',
-        iconBg: 'bg-amber-100 text-amber-600',
         title: 'الاستغفار النبوي اليومي',
         text: '«أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ»',
         targetCount: 100,
@@ -204,7 +197,6 @@
         category: 'morning',
         badge: 'موجب للجنة',
         icon: 'fa-solid fa-crown',
-        iconBg: 'bg-yellow-100 text-yellow-700',
         title: 'سيّد الاستغفار',
         text: '«اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ»',
         targetCount: 1,
@@ -216,9 +208,8 @@
       {
         id: 5,
         category: 'morning',
-        badge: 'أجر مضاعف',
+        badge: 'أجر مضاعف عظيم',
         icon: 'fa-solid fa-scale-balanced',
-        iconBg: 'bg-teal-100 text-teal-700',
         title: 'تسبيح جوامع الكلم (الوزن العظيم)',
         text: '«سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ»',
         targetCount: 3,
@@ -232,7 +223,6 @@
         category: 'prayer',
         badge: 'دبر كل صلاة',
         icon: 'fa-solid fa-book-quran',
-        iconBg: 'bg-emerald-100 text-emerald-700',
         title: 'آية الكرسي دبر المكتوبة',
         text: '«اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...»',
         targetCount: 1,
@@ -246,9 +236,8 @@
         category: 'prayer',
         badge: 'دبر كل صلاة',
         icon: 'fa-solid fa-gem',
-        iconBg: 'bg-emerald-100 text-emerald-700',
         title: 'تسبيح الصلوات المكتوبة',
-        text: '«سُبْحَانَ اللَّهِ (33)، الحَمْدُ لِلَّهِ (33)، اللَّهُ أَكْبَرُ (33)، وتَمَامَ المِائَةِ: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ»',
+        text: '«سُبْحَانَ اللَّهِ (33) ، الحَمْدُ لِلَّهِ (33) ، اللَّهُ أَكْبَرُ (33) ، وتَمَامَ المِائَةِ: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ»',
         targetCount: 100,
         currentCount: 0,
         hadith: 'قال ﷺ: «مَنْ سَبَّحَ فِي دُبُرِ كُلِّ صَلَاةٍ ثَلَاثًا وَثَلَاثِينَ... وَقَالَ تَمَامَ المِائَةِ... غُفِرَتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ البَحْرِ».',
@@ -259,9 +248,8 @@
         id: 8,
         category: 'actions',
         badge: 'بيت في الجنة',
-        icon: 'fa-solid fa-house-chimney-window',
-        iconBg: 'bg-blue-100 text-blue-700',
-        title: 'السنن الرواتب (12 ركعة في اليوم والليلة)',
+        icon: 'fa-solid fa-house-chimney',
+        title: 'السنن الرواتب (12 ركعة في اليوم)',
         text: '«أربع ركعات قبل الظهر وركعتان بعدها، وركعتان بعد المغرب، وركعتان بعد العشاء، وركعتان قبل صلاة الفجر»',
         targetCount: 1,
         currentCount: 0,
@@ -273,9 +261,8 @@
         id: 9,
         category: 'actions',
         badge: 'صدقة 360 مفصل',
-        icon: 'fa-solid fa-sun-plant-wilt',
-        iconBg: 'bg-amber-100 text-amber-700',
-        title: 'صلاة الضحى (صلاة الأوّابين)',
+        icon: 'fa-solid fa-sun',
+        title: 'صلاة الأوّابين (الضحى)',
         text: '«ركعتان إلى ثمان ركعات وقت الضحى» شكرٌ يومي لعافية المفاصل وصحة الجسد.',
         targetCount: 1,
         currentCount: 0,
@@ -288,12 +275,11 @@
         category: 'night',
         badge: 'حفظ الليلة من السموم',
         icon: 'fa-solid fa-shield-cat',
-        iconBg: 'bg-indigo-100 text-indigo-700',
         title: 'الاستعاذة بالكلمات التامات',
         text: '«أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ»',
         targetCount: 3,
         currentCount: 0,
-        hadith: 'قال ﷺ: «أَمَا لَوْ قُلْتَ حِينَ أَمْسَيْتَ: أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ، لَمْ تَضُرَّكَ (أي لدغة العقرب)».',
+        hadith: 'قال ﷺ: «أَمَا لَوْ قُلْتَ حِينَ أَمْسَيْتَ: أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ، لَمْ تَضُرَّكَ».',
         source: 'صحيح مسلم (2709) عن أبي هريرة',
         salafQuote: 'قال الإمام القرطبي: "هذا خبر صحيح صدّقناه تجربة؛ فما تركته منذ سمعته إلا ليلة فلدغتني عقرب فإذا بي نسيتها".'
       },
@@ -302,7 +288,6 @@
         category: 'night',
         badge: 'خير من خادم',
         icon: 'fa-solid fa-bed',
-        iconBg: 'bg-indigo-100 text-indigo-700',
         title: 'تسبيح النوم وفراش الفطرة',
         text: '«سُبْحَانَ اللَّهِ (33) ، الحَمْدُ لِلَّهِ (33) ، اللَّهُ أَكْبَرُ (34)»',
         targetCount: 100,
@@ -327,74 +312,76 @@
       filtered.forEach(item => {
         const isDone = item.currentCount >= item.targetCount;
         const card = document.createElement('article');
-        card.className = `rounded-3xl p-6 bg-white border transition-all duration-200 flex flex-col justify-between ${
-          isDone ? 'border-emerald-400 ring-2 ring-emerald-100 shadow-md' : 'border-slate-200 shadow-soft hover:shadow-card-hover hover:border-teal-300'
+        card.className = `rounded-3xl p-6 bg-navy-light border-2 transition-all flex flex-col justify-between ${
+          isDone ? 'border-emerald shadow-lg shadow-emerald/10' : 'border-navy-lighter hover:border-gold/60 shadow-md'
         }`;
 
         card.innerHTML = `
           <div>
+            <!-- الوسم والهدف -->
             <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold ${item.iconBg}">
-                <i class="${item.icon} text-sm"></i>
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-sm font-bold bg-navy border border-navy-lighter text-gold">
+                <i class="${item.icon}"></i>
                 ${item.badge}
               </span>
               <div class="flex items-center gap-2">
-                <span class="text-xs font-black text-slate-700 bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-lg">
-                  العدد المطلوب: ${item.targetCount}
+                <span class="text-sm font-black text-slate-200 bg-navy px-3 py-1 rounded-xl border border-navy-lighter">
+                  الهدف: ${item.targetCount}
                 </span>
-                ${isDone ? '<span class="text-xs bg-emerald-500 text-white font-bold px-2 py-0.5 rounded-lg shadow-sm">مُنجز ✓</span>' : ''}
+                ${isDone ? '<span class="text-xs bg-emerald text-navy font-black px-2.5 py-1 rounded-lg">مُكتمل ✓</span>' : ''}
               </div>
             </div>
 
-            <h3 class="text-lg font-black text-slate-900 mb-3">
+            <!-- عنوان الذكر -->
+            <h3 class="text-xl font-black text-white mb-4">
               ${item.title}
             </h3>
 
-            <!-- متن الذكر واضح وعريض بخط Cairo -->
-            <div class="p-4 rounded-2xl bg-amber-50/50 border border-amber-200/60 mb-4">
-              <p class="text-lg md:text-xl font-black text-amber-950 leading-relaxed select-none">
+            <!-- متن الذكر (خط كبير جداً وواضح بلون ذهبي) -->
+            <div class="p-5 rounded-2xl bg-navy border border-navy-lighter mb-5">
+              <p class="text-2xl md:text-3xl font-black text-gold leading-relaxed select-none">
                 ${item.text}
               </p>
             </div>
 
-            <!-- التخريج وأقوال السلف -->
-            <div class="space-y-2.5 mb-6">
-              <div class="text-xs rounded-xl bg-slate-50 p-3.5 border border-slate-200/70">
-                <div class="font-bold text-slate-800 mb-1 flex items-center gap-1.5">
-                  <i class="fa-solid fa-circle-check text-emerald-600"></i>
+            <!-- التخريج وأقوال السلف (خط متوسط وواضح) -->
+            <div class="space-y-3 mb-6">
+              <div class="rounded-xl bg-navy/60 p-4 border border-navy-lighter">
+                <div class="font-black text-base text-emerald mb-1.5 flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check"></i>
                   صحيح الأثر وتخريجه:
                 </div>
-                <p class="text-slate-600 font-medium leading-relaxed">${item.hadith}</p>
-                <div class="text-[11px] text-emerald-700 mt-1.5 font-bold">${item.source}</div>
+                <p class="text-slate-200 text-base font-semibold leading-relaxed">${item.hadith}</p>
+                <div class="text-xs text-gold font-bold mt-2">${item.source}</div>
               </div>
 
-              <div class="text-xs rounded-xl bg-teal-50/60 p-3.5 border border-teal-100">
-                <div class="font-bold text-teal-900 mb-1 flex items-center gap-1.5">
-                  <i class="fa-solid fa-lightbulb text-amber-500"></i>
+              <div class="rounded-xl bg-navy/60 p-4 border border-navy-lighter">
+                <div class="font-black text-base text-gold mb-1.5 flex items-center gap-2">
+                  <i class="fa-solid fa-quote-right"></i>
                   تأمل وتجربة السلف:
                 </div>
-                <p class="text-teal-950 font-medium leading-relaxed">${item.salafQuote}</p>
+                <p class="text-slate-200 text-base font-semibold leading-relaxed">${item.salafQuote}</p>
               </div>
             </div>
           </div>
 
-          <!-- العداد المضيء العصري -->
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
-            <div class="flex items-baseline gap-1.5">
-              <span class="text-3xl font-black text-slate-900">${item.currentCount}</span>
-              <span class="text-xs font-bold text-slate-400">/ ${item.targetCount}</span>
+          <!-- العداد وأزرار التحكم الكبيرة -->
+          <div class="pt-5 border-t border-navy-lighter flex items-center justify-between gap-4">
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl font-black text-white">${item.currentCount}</span>
+              <span class="text-sm font-bold text-slate-400">/ ${item.targetCount}</span>
             </div>
 
-            <div class="flex items-center gap-2">
-              <button onclick="resetCount(${item.id})" title="تصفير" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition">
-                <i class="fa-solid fa-rotate-left text-sm"></i>
+            <div class="flex items-center gap-3">
+              <button onclick="resetCount(${item.id})" title="تصفير" class="w-12 h-12 rounded-2xl bg-navy border border-navy-lighter hover:border-slate-400 text-slate-400 hover:text-white flex items-center justify-center transition">
+                <i class="fa-solid fa-rotate-left text-base"></i>
               </button>
-              <button onclick="incrementCount(${item.id})" class="px-5 py-2.5 rounded-xl font-black text-xs flex items-center gap-2 transition-all ${
+              <button onclick="incrementCount(${item.id})" class="px-6 py-3.5 rounded-2xl font-black text-sm flex items-center gap-2 transition-all ${
                 isDone 
-                  ? 'bg-emerald-600 text-white cursor-default shadow-sm' 
-                  : 'bg-gradient-to-r from-amber-500 to-amber-600 text-white hover:brightness-105 active:scale-95 shadow-btn-gold'
+                  ? 'bg-emerald text-navy cursor-default shadow-md' 
+                  : 'bg-gold hover:bg-gold-dark text-navy font-black active:scale-95 shadow-lg'
               }">
-                <i class="fa-solid ${isDone ? 'fa-check' : 'fa-fingerprint'} text-sm"></i>
+                <i class="fa-solid ${isDone ? 'fa-check' : 'fa-fingerprint'} text-lg"></i>
                 ${isDone ? 'تم بحمد الله' : 'تسجيل ذكر'}
               </button>
             </div>
@@ -437,13 +424,13 @@
     function filterCategory(cat) {
       currentFilter = cat;
       document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.classList.remove('bg-emerald-700', 'text-white', 'shadow-md', 'shadow-emerald-700/20');
-        btn.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+        btn.classList.remove('bg-emerald', 'text-navy', 'shadow-lg');
+        btn.classList.add('bg-navy-light', 'border', 'border-navy-lighter', 'text-slate-300');
       });
 
       const activeBtn = window.event.currentTarget;
-      activeBtn.classList.remove('bg-white', 'border-slate-200', 'text-slate-600');
-      activeBtn.classList.add('bg-emerald-700', 'text-white', 'shadow-md', 'shadow-emerald-700/20');
+      activeBtn.classList.remove('bg-navy-light', 'border-navy-lighter', 'text-slate-300');
+      activeBtn.classList.add('bg-emerald', 'text-navy', 'shadow-lg');
 
       renderCards();
     }

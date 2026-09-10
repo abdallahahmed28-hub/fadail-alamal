@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فضائل الأعمال اليومية</title>
+  <title>فضائل الأعمال اليومية | منهاج الهدى</title>
 
-  <!-- خط Cairo بجميع أوزانه لقراءة مريحة وواضحة جداً -->
+  <!-- أيقونة الموقع وسطح المكتب وشاشات الهواتف (Favicon & App Icon) بصيغة SVG فائقة الدقة -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23059669;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230F766E;stop-opacity:1' /%3E%3C/defs%3E%3Crect width='512' height='512' rx='110' fill='url(%23grad)'/%3E%3Cpath d='M256 90 L390 190 L390 390 L256 430 L122 390 L122 190 Z' fill='none' stroke='%23F59E0B' stroke-width='16' stroke-linejoin='round'/%3E%3Cpath d='M256 160 C230 160 210 180 210 206 C210 240 256 290 256 290 C256 290 302 240 302 206 C302 180 282 160 256 160 Z' fill='%23F59E0B'/%3E%3Ctext x='50%25' y='76%25' text-anchor='middle' fill='%23FFFFFF' font-family='Cairo, sans-serif' font-size='56' font-weight='900'%3Eفضائل%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23059669;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230F766E;stop-opacity:1' /%3E%3C/defs%3E%3Crect width='512' height='512' rx='110' fill='url(%23grad)'/%3E%3Cpath d='M256 90 L390 190 L390 390 L256 430 L122 390 L122 190 Z' fill='none' stroke='%23F59E0B' stroke-width='16' stroke-linejoin='round'/%3E%3Cpath d='M256 160 C230 160 210 180 210 206 C210 240 256 290 256 290 C256 290 302 240 302 206 C302 180 282 160 256 160 Z' fill='%23F59E0B'/%3E%3Ctext x='50%25' y='76%25' text-anchor='middle' fill='%23FFFFFF' font-family='Cairo, sans-serif' font-size='56' font-weight='900'%3Eفضائل%3C/text%3E%3C/svg%3E">
+
+  <!-- خط Cairo بجميع الأوزان -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -21,26 +25,23 @@
       theme: {
         extend: {
           colors: {
-            // الثلاثية اللونية المتناسقة الفاخرة
-            navy: {
-              DEFAULT: '#0A192F',
-              light: '#112240',
-              lighter: '#1E3A5F',
-              dark: '#060D1A'
-            },
-            gold: {
-              DEFAULT: '#F59E0B',
-              light: '#FDE68A',
-              dark: '#B45309'
-            },
-            emerald: {
-              DEFAULT: '#10B981',
-              light: '#A7F3D0',
-              dark: '#047857'
+            brand: {
+              emerald: '#059669',
+              emeraldDark: '#047857',
+              emeraldLight: '#ECFDF5',
+              gold: '#D97706',
+              goldLight: '#FEF3C7',
+              slateBg: '#F1F5F9',
+              textMain: '#0F172A',
+              textSub: '#334155'
             }
           },
           fontFamily: {
             sans: ['Cairo', 'sans-serif']
+          },
+          boxShadow: {
+            'clean': '0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02)',
+            'clean-hover': '0 12px 30px -4px rgba(5, 150, 105, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.03)'
           }
         }
       }
@@ -49,45 +50,48 @@
 
   <style>
     body {
-      background-color: #0A192F;
+      background-color: #F8FAFC;
       font-family: 'Cairo', sans-serif;
     }
     .custom-scroll::-webkit-scrollbar {
       height: 6px;
     }
     .custom-scroll::-webkit-scrollbar-thumb {
-      background: #1E3A5F;
+      background: #CBD5E1;
       border-radius: 9999px;
     }
   </style>
 </head>
-<body class="text-slate-100 min-h-screen pb-24 selection:bg-gold selection:text-navy">
+<body class="text-brand-textMain min-h-screen pb-24">
 
-  <!-- شريط الملاحة العلوي -->
-  <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur-md border-b border-navy-lighter px-4 lg:px-8 py-4 shadow-lg">
+  <!-- شريط الملاحة العلوي المشرق -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 lg:px-8 py-3.5 shadow-sm">
     <div class="max-w-5xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-3.5">
-        <div class="w-12 h-12 rounded-2xl bg-gold text-navy flex items-center justify-center text-xl shadow-md font-black">
+        <!-- أيقونة التطبيق الرسمية -->
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-emerald to-teal-600 text-white flex items-center justify-center text-xl shadow-md font-black">
           <i class="fa-solid fa-kaaba"></i>
         </div>
         <div>
-          <h1 class="text-xl font-extrabold text-white tracking-wide flex items-center gap-2">
-            فضائل الأعمال اليومية
-            <span class="text-xs bg-emerald/20 text-emerald-light border border-emerald/40 px-2.5 py-0.5 rounded-full font-bold">
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl font-black text-slate-900 tracking-tight">فضائل الأعمال اليومية</h1>
+            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-brand-emeraldLight text-brand-emerald border border-emerald-200">
               مُحقّق
             </span>
-          </h1>
-          <p class="text-sm text-slate-300 font-medium">سياحة الروح في صحيح الأثر وتجارب السلف الصالح</p>
+          </div>
+          <p class="text-xs font-bold text-slate-500 flex items-center gap-1.5">
+            <span class="text-brand-emerald font-extrabold">منهاج الهدى</span> • سياحة الروح في صحيح الأثر وتجارب السلف
+          </p>
         </div>
       </div>
 
-      <!-- مقياس الإنجاز اليومي -->
-      <div class="flex items-center gap-3 bg-navy-light border border-navy-lighter rounded-2xl px-4 py-2">
+      <!-- مقياس الإنجاز اليومي الدائري -->
+      <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-2xl px-4 py-2">
         <div class="text-left">
-          <div class="text-xs font-bold text-slate-400">الإنجاز اليومي</div>
-          <div class="text-base font-black text-gold"><span id="completed-count">0</span> / <span id="total-count">0</span></div>
+          <div class="text-[11px] font-bold text-slate-400">الإنجاز اليومي</div>
+          <div class="text-base font-black text-brand-emerald"><span id="completed-count">0</span> / <span id="total-count">0</span></div>
         </div>
-        <div class="w-11 h-11 rounded-full bg-emerald/20 border-2 border-emerald flex items-center justify-center text-sm font-black text-emerald" id="progress-percent">
+        <div class="w-10 h-10 rounded-full bg-white border-2 border-brand-emerald flex items-center justify-center text-xs font-black text-brand-emerald shadow-sm" id="progress-percent">
           0%
         </div>
       </div>
@@ -97,57 +101,67 @@
   <!-- الحاوية الأساسية -->
   <main class="max-w-5xl mx-auto px-4 lg:px-8 pt-6">
 
-    <!-- بطاقة الدرة اليومية والوقت المستحب -->
+    <!-- بطاقة التوجيه والدرة اليومية بتصميم أبيض مشرق -->
     <section class="mb-8">
-      <div class="rounded-3xl p-6 lg:p-8 bg-navy-light border-2 border-navy-lighter shadow-xl">
+      <div class="rounded-3xl p-6 lg:p-8 bg-white border border-slate-200 shadow-clean relative overflow-hidden">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div class="space-y-3 max-w-2xl">
-            <span class="inline-flex items-center gap-2 text-sm font-bold text-gold bg-gold/15 px-3 py-1 rounded-full border border-gold/30">
-              <i class="fa-solid fa-quote-right"></i> درة اليوم من أقوال السلف
+            <span class="inline-flex items-center gap-2 text-xs font-black text-brand-emerald bg-brand-emeraldLight px-3 py-1 rounded-full border border-emerald-200">
+              <i class="fa-solid fa-quote-right"></i> درة اليوم من مشكاة السلف
             </span>
-            <p class="text-xl md:text-2xl font-bold text-white leading-relaxed pt-1">
+            <p class="text-xl md:text-2xl font-black text-slate-800 leading-relaxed pt-1">
               «الذكر للقلب مثل الماء للسمك، فكيف يكون حال السمك إذا فارق الماء؟ ومن حَصَّن يومه بالأوراد المأثورة كان في حصنٍ حصين لا تنفذ إليه سهام العدو.»
             </p>
-            <div class="text-sm font-bold text-slate-300">— الإمام شمس الدين ابن القيم رحمه الله (الوابل الصيب)</div>
+            <div class="text-sm font-bold text-slate-500">— الإمام شمس الدين ابن القيم رحمه الله (الوابل الصيب)</div>
           </div>
 
-          <div class="bg-navy rounded-2xl p-4 border border-navy-lighter flex items-center gap-4 shrink-0">
-            <div class="w-14 h-14 rounded-2xl bg-emerald text-navy flex items-center justify-center text-2xl font-bold shadow-md">
+          <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 flex items-center gap-4 shrink-0">
+            <div class="w-12 h-12 rounded-2xl bg-brand-emerald text-white flex items-center justify-center text-xl font-bold shadow-sm">
               <i class="fa-regular fa-clock"></i>
             </div>
             <div>
               <div class="text-xs font-bold text-slate-400">المحطة المستحبة الآن</div>
-              <div class="text-base font-black text-emerald" id="time-station-label">أوراد النهار والسعي</div>
+              <div class="text-base font-black text-slate-800" id="time-station-label">أوراد النهار والسعي</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- شريط الفلاتر والتصنيفات -->
+    <!-- شريط تصنيفات الأوراد بالأبيض والزمردي -->
     <nav class="flex items-center gap-2.5 overflow-x-auto pb-4 custom-scroll mb-8" id="category-tabs">
-      <button onclick="filterCategory('all')" class="category-btn active px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-emerald text-navy shadow-lg whitespace-nowrap">
+      <button onclick="filterCategory('all')" class="category-btn active px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-brand-emerald text-white shadow-md shadow-emerald-600/20 whitespace-nowrap">
         <i class="fa-solid fa-shapes"></i> كافة الأوراد والأعمال
       </button>
-      <button onclick="filterCategory('hundred')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-gold whitespace-nowrap">
-        <i class="fa-solid fa-certificate text-gold"></i> المئويات (100 مرة)
+      <button onclick="filterCategory('hundred')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-brand-emerald whitespace-nowrap">
+        <i class="fa-solid fa-certificate text-brand-gold"></i> المئويات (100 مرة)
       </button>
-      <button onclick="filterCategory('morning')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-gold whitespace-nowrap">
-        <i class="fa-solid fa-sun text-gold"></i> الفجر والاستيقاظ
+      <button onclick="filterCategory('morning')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-brand-emerald whitespace-nowrap">
+        <i class="fa-solid fa-sun text-brand-gold"></i> الفجر والاستيقاظ
       </button>
-      <button onclick="filterCategory('prayer')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-emerald whitespace-nowrap">
-        <i class="fa-solid fa-mosque text-emerald"></i> دبر الصلوات المكتوبة
+      <button onclick="filterCategory('prayer')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-brand-emerald whitespace-nowrap">
+        <i class="fa-solid fa-mosque text-brand-emerald"></i> دبر الصلوات المكتوبة
       </button>
-      <button onclick="filterCategory('actions')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-gold whitespace-nowrap">
-        <i class="fa-solid fa-heart-pulse text-gold"></i> سنن وأعمال النهار
+      <button onclick="filterCategory('actions')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-brand-emerald whitespace-nowrap">
+        <i class="fa-solid fa-heart-pulse text-blue-600"></i> سنن وأعمال النهار
       </button>
-      <button onclick="filterCategory('night')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-navy-light border border-navy-lighter text-slate-300 hover:border-emerald whitespace-nowrap">
-        <i class="fa-solid fa-moon text-emerald"></i> المساء والنوم
+      <button onclick="filterCategory('night')" class="category-btn px-5 py-3 rounded-2xl text-sm font-black flex items-center gap-2 transition-all bg-white border border-slate-200 text-slate-700 hover:border-brand-emerald whitespace-nowrap">
+        <i class="fa-solid fa-moon text-indigo-600"></i> المساء والنوم
       </button>
     </nav>
 
-    <!-- شبكة بطاقات الأذكار -->
+    <!-- شبكة البطاقات البيضاء المشرقة مع خط Cairo الكبير -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="cards-grid"></div>
+
+    <!-- تذييل الصفحة الرسمي -->
+    <footer class="mt-16 text-center border-t border-slate-200 pt-8 pb-4">
+      <div class="inline-flex items-center gap-2 text-sm font-black text-slate-700">
+        <span>تطبيق فضائل الأعمال اليومية</span>
+        <span>•</span>
+        <span class="text-brand-emerald font-extrabold">منهاج الهدى</span>
+      </div>
+      <p class="text-xs text-slate-400 mt-1 font-semibold">جميع الأحاديث الواردة مصححة ومحققة من كتب السنة المعتمدة</p>
+    </footer>
 
   </main>
 
@@ -312,76 +326,76 @@
       filtered.forEach(item => {
         const isDone = item.currentCount >= item.targetCount;
         const card = document.createElement('article');
-        card.className = `rounded-3xl p-6 bg-navy-light border-2 transition-all flex flex-col justify-between ${
-          isDone ? 'border-emerald shadow-lg shadow-emerald/10' : 'border-navy-lighter hover:border-gold/60 shadow-md'
+        card.className = `rounded-3xl p-6 md:p-7 bg-white border-2 transition-all flex flex-col justify-between shadow-clean ${
+          isDone ? 'border-brand-emerald bg-emerald-50/20' : 'border-slate-200 hover:border-brand-emerald/50 hover:shadow-clean-hover'
         }`;
 
         card.innerHTML = `
           <div>
-            <!-- الوسم والهدف -->
+            <!-- الرأس والوسم -->
             <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-sm font-bold bg-navy border border-navy-lighter text-gold">
-                <i class="${item.icon}"></i>
+              <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-black bg-slate-100 text-slate-700 border border-slate-200">
+                <i class="${item.icon} text-brand-emerald"></i>
                 ${item.badge}
               </span>
               <div class="flex items-center gap-2">
-                <span class="text-sm font-black text-slate-200 bg-navy px-3 py-1 rounded-xl border border-navy-lighter">
+                <span class="text-xs font-black text-slate-700 bg-slate-100 px-3 py-1 rounded-xl border border-slate-200">
                   الهدف: ${item.targetCount}
                 </span>
-                ${isDone ? '<span class="text-xs bg-emerald text-navy font-black px-2.5 py-1 rounded-lg">مُكتمل ✓</span>' : ''}
+                ${isDone ? '<span class="text-xs bg-brand-emerald text-white font-black px-2.5 py-1 rounded-lg">مُكتمل ✓</span>' : ''}
               </div>
             </div>
 
             <!-- عنوان الذكر -->
-            <h3 class="text-xl font-black text-white mb-4">
+            <h3 class="text-xl font-black text-slate-900 mb-4">
               ${item.title}
             </h3>
 
-            <!-- متن الذكر (خط كبير جداً وواضح بلون ذهبي) -->
-            <div class="p-5 rounded-2xl bg-navy border border-navy-lighter mb-5">
-              <p class="text-2xl md:text-3xl font-black text-gold leading-relaxed select-none">
+            <!-- متن الذكر (خط Cairo عريض جداً وواضح) -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 mb-5">
+              <p class="text-2xl md:text-3xl font-black text-slate-900 leading-relaxed select-none">
                 ${item.text}
               </p>
             </div>
 
-            <!-- التخريج وأقوال السلف (خط متوسط وواضح) -->
+            <!-- التخريج وأقوال السلف -->
             <div class="space-y-3 mb-6">
-              <div class="rounded-xl bg-navy/60 p-4 border border-navy-lighter">
-                <div class="font-black text-base text-emerald mb-1.5 flex items-center gap-2">
+              <div class="rounded-xl bg-slate-50 p-4 border border-slate-200">
+                <div class="font-black text-sm text-brand-emerald mb-1.5 flex items-center gap-1.5">
                   <i class="fa-solid fa-circle-check"></i>
                   صحيح الأثر وتخريجه:
                 </div>
-                <p class="text-slate-200 text-base font-semibold leading-relaxed">${item.hadith}</p>
-                <div class="text-xs text-gold font-bold mt-2">${item.source}</div>
+                <p class="text-slate-700 text-sm md:text-base font-bold leading-relaxed">${item.hadith}</p>
+                <div class="text-xs text-brand-emerald font-black mt-2 font-mono">${item.source}</div>
               </div>
 
-              <div class="rounded-xl bg-navy/60 p-4 border border-navy-lighter">
-                <div class="font-black text-base text-gold mb-1.5 flex items-center gap-2">
+              <div class="rounded-xl bg-amber-50/60 p-4 border border-amber-200/70">
+                <div class="font-black text-sm text-brand-gold mb-1.5 flex items-center gap-1.5">
                   <i class="fa-solid fa-quote-right"></i>
                   تأمل وتجربة السلف:
                 </div>
-                <p class="text-slate-200 text-base font-semibold leading-relaxed">${item.salafQuote}</p>
+                <p class="text-slate-800 text-sm md:text-base font-bold leading-relaxed">${item.salafQuote}</p>
               </div>
             </div>
           </div>
 
-          <!-- العداد وأزرار التحكم الكبيرة -->
-          <div class="pt-5 border-t border-navy-lighter flex items-center justify-between gap-4">
+          <!-- العداد وأزرار التحكم -->
+          <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-4">
             <div class="flex items-baseline gap-2">
-              <span class="text-4xl font-black text-white">${item.currentCount}</span>
-              <span class="text-sm font-bold text-slate-400">/ ${item.targetCount}</span>
+              <span class="text-4xl font-black text-slate-900">${item.currentCount}</span>
+              <span class="text-sm font-black text-slate-400">/ ${item.targetCount}</span>
             </div>
 
-            <div class="flex items-center gap-3">
-              <button onclick="resetCount(${item.id})" title="تصفير" class="w-12 h-12 rounded-2xl bg-navy border border-navy-lighter hover:border-slate-400 text-slate-400 hover:text-white flex items-center justify-center transition">
-                <i class="fa-solid fa-rotate-left text-base"></i>
+            <div class="flex items-center gap-2.5">
+              <button onclick="resetCount(${item.id})" title="تصفير العداد" class="w-11 h-11 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-900 flex items-center justify-center transition">
+                <i class="fa-solid fa-rotate-left text-sm"></i>
               </button>
-              <button onclick="incrementCount(${item.id})" class="px-6 py-3.5 rounded-2xl font-black text-sm flex items-center gap-2 transition-all ${
+              <button onclick="incrementCount(${item.id})" class="px-6 py-3 rounded-2xl font-black text-sm flex items-center gap-2 transition-all ${
                 isDone 
-                  ? 'bg-emerald text-navy cursor-default shadow-md' 
-                  : 'bg-gold hover:bg-gold-dark text-navy font-black active:scale-95 shadow-lg'
+                  ? 'bg-brand-emerald text-white cursor-default shadow-sm' 
+                  : 'bg-brand-emerald hover:bg-brand-emeraldDark text-white active:scale-95 shadow-md shadow-emerald-600/25'
               }">
-                <i class="fa-solid ${isDone ? 'fa-check' : 'fa-fingerprint'} text-lg"></i>
+                <i class="fa-solid ${isDone ? 'fa-check' : 'fa-fingerprint'} text-base"></i>
                 ${isDone ? 'تم بحمد الله' : 'تسجيل ذكر'}
               </button>
             </div>
@@ -424,13 +438,13 @@
     function filterCategory(cat) {
       currentFilter = cat;
       document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.classList.remove('bg-emerald', 'text-navy', 'shadow-lg');
-        btn.classList.add('bg-navy-light', 'border', 'border-navy-lighter', 'text-slate-300');
+        btn.classList.remove('bg-brand-emerald', 'text-white', 'shadow-md', 'shadow-emerald-600/20');
+        btn.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-700');
       });
 
       const activeBtn = window.event.currentTarget;
-      activeBtn.classList.remove('bg-navy-light', 'border-navy-lighter', 'text-slate-300');
-      activeBtn.classList.add('bg-emerald', 'text-navy', 'shadow-lg');
+      activeBtn.classList.remove('bg-white', 'border-slate-200', 'text-slate-700');
+      activeBtn.classList.add('bg-brand-emerald', 'text-white', 'shadow-md', 'shadow-emerald-600/20');
 
       renderCards();
     }
